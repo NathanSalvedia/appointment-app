@@ -1,0 +1,100 @@
+
+
+body
+{
+  font-family: "Open Sans", 'sans-serif';
+  background-color: #e9ecef;
+}
+
+
+
+
+.btn{
+  background-color:  #BD6E6E;
+  color: #fff;
+  font-size: 1.375rem;
+  font-weight: 500;
+ 
+}
+
+.form-password{
+  font-size: 19px; 
+  font-weight: 500; 
+  border-radius: 1.563rem;
+  margin-left: 164px;
+  
+}
+
+.card{
+  background-color: #76292A;
+   min-height: 100vh;
+  width: 320px;
+}
+
+.heading{
+  color: #fff;
+ 
+}
+
+.nav{
+  font-size: 1.375rem;
+  
+}
+
+
+.form-btn{
+  margin-left: 180px;
+}
+
+
+.btn-iimg{
+ margin-left: 180px;
+}
+
+
+.form-password label{
+  font-size: 22px;
+}
+
+
+.admin-form label,
+.admin-form input{
+ font-size: 1.5rem;
+ font-weight: 500;
+ display: block; 
+ width: 100%;
+ padding: 5px;
+ border-radius: 7px;
+ outline: none  ;
+}
+
+.cta-form{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  background-color: #BD6E6E;
+  color: #fff;
+  border-radius: 9px;
+  outline: none;
+}
+
+.form-group{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.form-floating{
+  font-size:  1.25rem;
+  font-weight: 500;
+}
+
+.cta-table{
+  font-size: 25px;
+}
+
