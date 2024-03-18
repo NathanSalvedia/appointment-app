@@ -31,13 +31,13 @@
                  </div>
 
                  <div class="mt-2 mb-2 d-grid ">
-                    <a class="btn btn-dark btn-block  btn-lg  " href="mainpage.html" role="button">Login</a>
+                    <a class="btn btn-dark btn-block  btn-lg  " href="{{ asset('mainpage') }}" role="button">Login</a>
                     <!--<button-- type="submit" class="btn btn-block btn-light">Login</button-->
                  </div>
 
                  <div class="cta-form text-center py-4 ">
                     Don't have account?
-                    <a href="signup.html"
+                    <a href="{{ asset('signup') }}"
                     class="text-dark text-decoration-none">Sign Up</a>
                 </div>
                 </form>

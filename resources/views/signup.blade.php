@@ -29,10 +29,10 @@
                         <input type="password" class="form-control  form-control-lg" name="password_confirmation" />
                     </div>
                     <div class="mt-2 mb-2 pt-2 d-grid">
-                        <a class="btn btn-dark btn-block    " href="verify-email.html" role="button">Sign Up</a>
+                        <a class="btn btn-dark btn-block    "href="verify-email.html" role="button">Sign Up</a>
                         <div class="cta-form text-center py-4 text-dark">
                             Already have account?
-                            <a href="login.html" class=" text-dark text-decoration-none">Login</a>
+                            <a href="{{ asset('login') }}" class=" text-dark text-decoration-none">Login</a>
                         </div>
                     </div>
                 </form>

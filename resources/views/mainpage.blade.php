@@ -4,21 +4,20 @@
 
 @section('content')
 
-<div class="container-fluid section-main p-5">
+<section class="section-main p-5 ">
     <div class="main">
-      <div class="text-center">
-        <h1 class="display-1 p-5 m-5 text-white">"By Scheduling an appointment you're taking"</h1>
-      </div>
-      <p class="h1 text-center my-5 pt-5 text-white">
+      <div class="main-section-text">
+        <h1 class="heading-primary p-5 m-5">"By Scheduling an appointment you're taking"</h1>
+       </div>
+       <p class="main-description">
         A steps towards making your dreams a Reality
-       </p>
+      </p>
+      <div class="main-btn">
 
-       <div class="main-btn text-center">
-        <a class="btn btn--form" href="request.html" role="button">Request now!!</a>
+        <a class="btn btn--form" href="appointment.html" role="button">Request now!!</a>
         <!--<button href="#appointment.html" class="btn btn--form">Request now!!</button>-->
       </div>
     </div>
-
     <footer class="footer">
       <div class="info-col">
         <p class="footer-heading">Contact Us:</p>
@@ -41,6 +40,6 @@
         </ul>
       </div>
     </footer>
-  </div>
+   </section>
 
 @endsection
