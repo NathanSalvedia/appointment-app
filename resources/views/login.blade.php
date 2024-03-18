@@ -27,7 +27,7 @@
 
                  <div class="form-text mb-5 d-flex justify-content-between">
 
-                    <a class=" text-dark form-text text-decoration-none" href="forgot-password.html"> Forgot Password?</a>
+                    <a class=" text-dark form-text text-decoration-none" href='{{ route('user.forgot')}}'> Forgot Password?</a>
                  </div>
 
                  <div class="mt-2 mb-2 d-grid ">

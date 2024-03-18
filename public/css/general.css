@@ -27,7 +27,7 @@ body
 
 .card{
   background-color: #76292A;
-  min-height: 100vh;
+   min-height: 100vh;
   width: 320px;
 }
 
@@ -48,14 +48,12 @@ body
 
 
 .btn-iimg{
- margin-left: 295px;
-
+ margin-left: 180px;
 }
 
 
 .form-password label{
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 22px;
 }
 
 

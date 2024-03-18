@@ -14,7 +14,7 @@
       </p>
       <div class="main-btn">
 
-        <a class="btn btn--form" href="appointment.html" role="button">Request now!!</a>
+        <a class="btn btn--form" href='{{route('user.request')}}' role="button">Request now!!</a>
         <!--<button href="#appointment.html" class="btn btn--form">Request now!!</button>-->
       </div>
     </div>
@@ -33,8 +33,7 @@
                   <img class="icons" alt="" src="img/icon1.png" />
                  </a>
                 <a class="footer-link" href="mailto:spc.edu.ph@gmail.com"
-                >spc.edu.ph@gmail.com</a
-
+                >spc.edu.ph@gmail.com</a>
             </p>
           </address>
         </ul>

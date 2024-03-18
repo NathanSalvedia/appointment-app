@@ -15,13 +15,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/general.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 
 
 
 
 </head>
+    <style>
+        body{
+        background-color: #76292A;
+    }
 
+    </style>
 
   </style>
 <body>
