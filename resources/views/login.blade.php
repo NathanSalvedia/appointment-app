@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+@section('title', 'Appointment App | Login ')
+
 <div class="auth-wrapper d-flex pt-5">
     <div class="col-md-4 m-auto p-4">
         <div class="bg-white shadow p-3 mb-4 bg-body-tertiary  rounded">
@@ -25,18 +27,18 @@
 
                  <div class="form-text mb-5 d-flex justify-content-between">
 
-                    <a class=" text-dark form-text " href="forgot-password.html"> Forgot Password?</a>
+                    <a class=" text-dark form-text text-decoration-none" href="forgot-password.html"> Forgot Password?</a>
                  </div>
 
                  <div class="mt-2 mb-2 d-grid ">
-                    <a class="btn btn-dark btn-block  btn-lg  " href="dashboard.html" role="button">Login</a>
+                    <a class="btn btn-dark btn-block  btn-lg  " href="mainpage.html" role="button">Login</a>
                     <!--<button-- type="submit" class="btn btn-block btn-light">Login</button-->
                  </div>
 
                  <div class="cta-form text-center py-4 ">
                     Don't have account?
                     <a href="signup.html"
-                    class="text-dark">Sign Up</a>
+                    class="text-dark text-decoration-none">Sign Up</a>
                 </div>
                 </form>
             </div>

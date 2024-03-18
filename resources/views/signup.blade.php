@@ -1,5 +1,8 @@
 @extends('layouts.second-public')
 
+@section('title', 'Appointment App | Signup')
+
+<
 <div class="auth-wrapper d-flex pt-5">
     <div class="col-md-4 m-auto ">
 
@@ -29,7 +32,7 @@
                         <a class="btn btn-dark btn-block    " href="verify-email.html" role="button">Sign Up</a>
                         <div class="cta-form text-center py-4 text-dark">
                             Already have account?
-                            <a href="login.html" class=" text-dark">Login</a>
+                            <a href="login.html" class=" text-dark text-decoration-none">Login</a>
                         </div>
                     </div>
                 </form>
@@ -37,3 +40,5 @@
         </div>
     </div>
 </div>
+
+
