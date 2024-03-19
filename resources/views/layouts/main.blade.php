@@ -24,19 +24,20 @@
 <body>
 
 
-    <header class="header">
-        <a href="#">
-         <img class="logo" alt="" src="img/logo.png" />
-        </a>
-
-        <nav class="main-nav">
-         <ul class="main-nav-list">
-           <li><a class="main-nav-link nav-cta" href='{{ route('user.status')}}'>Appointment</a></li>
-           <li><a class="main-nav-link" href='{{ route('user.settings')}}'>Settings</a></li>
-           <li><a class="main-nav-link" href='{{ route('user.logout')}}'>Logout</a></li>
-         </ul>
-       </nav>
-      </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand pl-5">
+                <img class="logo" alt="SPC logo" src="img/logo.png" width="170"/>
+            </a>
+            <div class="collapse navbar-collapse" id="navbar-toggler">
+                <ul class="navbar-nav ml-auto main-nav-list">
+                    <li><a class="nav-item main-nav-link nav-cta" href='{{ route('user.status')}}'>Appointment</a></li>
+                    <li><a class="nav-item main-nav-link" href='{{ route('user.settings')}}'>Settings</a></li>
+                    <li><a class="nav-item main-nav-link" href='{{ route('user.logout')}}'>Logout</a></li>
+                  </ul>
+            </div>
+        </div>
+    </nav>
 
       @yield('content')
 

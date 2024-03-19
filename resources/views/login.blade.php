@@ -11,7 +11,9 @@
                 <img class="logo" alt="" src="img/logo7.png" />
                 </a>
             </div>
+
             <div class=" px-3 pt-3 mx-4 m-3 p-5">
+
                 <h1 class="display-3 text-center  font-weight-bold text-dark">Login</h1>
                 <!--<p class="h1 text-center p-5 font-weight-bold  text-black">Login</p>-->
                 <form class="form-login">

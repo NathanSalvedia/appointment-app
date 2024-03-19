@@ -14,31 +14,31 @@ body
   color: #fff;
   font-size: 1.375rem;
   font-weight: 500;
- 
+
 }
 
 .form-password{
-  font-size: 19px; 
-  font-weight: 500; 
+  font-size: 19px;
+  font-weight: 500;
   border-radius: 1.563rem;
   margin-left: 164px;
-  
+
 }
 
 .card{
   background-color: #76292A;
-   min-height: 100vh;
+  height: 100vh;
   width: 320px;
 }
 
 .heading{
   color: #fff;
- 
+
 }
 
 .nav{
   font-size: 1.375rem;
-  
+
 }
 
 
@@ -61,7 +61,7 @@ body
 .admin-form input{
  font-size: 1.5rem;
  font-weight: 500;
- display: block; 
+ display: block;
  width: 100%;
  padding: 5px;
  border-radius: 7px;

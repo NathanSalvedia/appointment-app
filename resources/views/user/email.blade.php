@@ -16,6 +16,7 @@
               <ul class="list-unstyled pl-5">
                 <li class="pt-5 mb-2 pl-5  p-5 text-center"><a class="text-white" href="{{ asset('mainpage')}}">Home</a></li>
                 <li class="pt-5 mb-2 pl-5  p-5 text-center"><a class="text-white" href='{{ route('user.status')}}'>Appointment</a></li>
+                <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('user.settings')}}'>Settings</a></li>
                 <li class="pt-5 mb-2 pl-5  p-5 text-center"><a class="text-white" href='{{ route('user.logout')}}'>Logout</a></li>
               </ul>
              </div>
@@ -33,6 +34,7 @@
                 <img class="icon" alt="" src="{{ asset('img/icon.png')}}" />
                </a>
             </div>
+
             <div class="form-btn text-center mt-5 pl-5 ">
               <a class="btn bnt-lg" href="change-profile.html" role="button">Change Profile</a>
               <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
