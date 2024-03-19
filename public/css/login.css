@@ -1,0 +1,42 @@
+
+body{
+    font-family: "Open Sans", 'san-serif';
+    background-color: #76292A;
+  
+}
+
+.auth-wrapper {
+    min-height: 60vh;
+}
+
+
+/*
+.wrapper{
+    background-color: #800020;
+}
+*/
+.form-text{
+    font-size: 30px ;
+}
+
+.btn{
+    font-size: 30px;
+}
+
+.form-login input{
+    font-size: 30px;
+
+}
+
+.cta-form{
+    font-size: 30px;
+}
+
+.form-signup{
+    font-size: 25px;
+}
+
+.form-signup input{
+    font-size: 30px;
+
+}
