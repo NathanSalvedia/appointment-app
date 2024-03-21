@@ -41,6 +41,7 @@
               <div class="mb-5 pt-5  text-right">
 
                 <a class="btn btn-lg" href='{{ route('user.status')}}' role="button">Back</a>
+                <a class="btn btn-lg" href='{{ route('user.create')}}' role="button">Edit</a>
                  <!--<button type="submit" class="btn  btn-lg">Submit</button>-->
                </div>
               </div>

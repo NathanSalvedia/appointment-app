@@ -74,7 +74,6 @@
                               <button type="button" class="btn btn-lg" data-dismiss="modal">Close
                                 <span aria-hidden="true">&times;</span>
                               </button>
-
                           </div>
                         </div>
                       </div>

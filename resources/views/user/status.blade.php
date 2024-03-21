@@ -38,7 +38,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                          <tr class=" tab">
+                          <tr>
                            <td>
                             <p class="h2">COR</p>
                            </td>
@@ -47,8 +47,7 @@
                            </td>
                             <td width="150" class="text-right">
                                 <a href='{{ route('user.view')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-                                <a href='{{ route('user.create')}}' class="btn btn-sm btn-circle btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
-                            </td>
+
                           </tr>
                         </tbody>
                        </table>
