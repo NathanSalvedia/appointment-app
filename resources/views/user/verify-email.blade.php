@@ -1,4 +1,4 @@
-@extends('layouts.example')
+@extends('layouts.extend')
 
 <<main class="py-5 mt-5 ">
     <div class="container pt-5 my-5 ">

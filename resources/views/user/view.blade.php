@@ -17,9 +17,8 @@
                 <form class="cta-form">
                   <div>
                     <select id="select-option" name="select-option "required>
-                      <option value="">Please choose one option:</option>
-                      <option value="Transcript of Record">Transcript of Record</option>
                       <option value="COR">COR</option>
+                      <option value="Transcript of Record">Transcript of Record</option>
                       <option value="Certitification of Unit Earn">Certitification of Unit Earn</option>
                       <option value="Speacial Order">Special Order  </option>
                       <option value="Certificate of Graduate">Certificate of Graduate</option>

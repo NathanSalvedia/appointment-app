@@ -17,7 +17,6 @@
           <!--<button href="#appointment.html" class="btn btn--form">Request now!!</button>-->
         </div>
       </div>
-
       <footer class="footer">
         <div class="info-col">
           <p class="footer-heading">Contact Us:</p>

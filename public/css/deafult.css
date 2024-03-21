@@ -1,0 +1,34 @@
+
+body
+{
+  font-family: "Open Sans", 'sans-serif';
+  background-color: #e9ecef;
+}
+
+
+.card{
+  background-color: #76292A;
+  height: 100vh;
+  width: 320px;
+}
+
+.heading{
+  color: #fff;
+
+}
+
+.nav{
+  font-size: 1.375rem;
+
+}
+
+
+
+  .btn{
+    font-size: 28px;
+    border-radius: 8px;
+  }
+
+
+
+

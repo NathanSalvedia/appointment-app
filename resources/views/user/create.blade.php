@@ -39,8 +39,23 @@
             </div>
             <div class="mb-5 pt-5  text-right">
              <a class="btn btn-lg" href='{{ route('user.status')}}' role="button">Back</a>
-              <a class="btn btn-lg" href="appointment-done.html" role="button">Save</a>
-              <!--<button type="submit" class="btn  btn-lg">Submit</button>-->
+             <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#exampleModal">Save</button>
+             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h2 class="modal-title text-danger" id="exampleModalLabel">Unsaved Changes</h2>
+                     </div>
+                     <div class="modal-body p-5">
+                         <h3 class="display-5 text-center text-success">Do you want to save the changes you made this time?</h3>
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn btn-lg" data-dismiss="modal">Save
+                       </button>
+                   </div>
+                 </div>
+               </div>
+         </div>
             </div>
             </div>
         </div>

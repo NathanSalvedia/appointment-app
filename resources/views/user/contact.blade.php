@@ -23,13 +23,11 @@
         </div>
       </div>
 
-
        <div class="container">
         <div class="col-md-9">
           <div class="pt-5">
             <p class="h2">Settings</p>
           </div>
-
           <div class="btn-iimg text-center pt-5 mt-5 pl-5 ">
             <a href="#">
               <img class="icons" alt="" src="{{ asset('img/icon.png')}}" />
@@ -40,12 +38,10 @@
             <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
            </div>
            <form class="form-password pl-5">
-
             <div class="mb-5 pt-5" >
               <label for="Phone" class="form-text form-label ">New Contact Number:</label>
               <input type="tel" class="form-control form-control-lg" name="phone" placeholder="+63" />
               </div>
-
             <div class="mb-5 pt-5  text-right">
               <a class="btn btn-lg" href='{{ route('user.settings')}}' role="button">Back</a>
               <button type="submit" class="btn  btn-lg" value="submit">Update</button>

@@ -101,3 +101,7 @@ Route::get('/user/view', function () {
 Route::get('/user/verify-email', function () {
     return view('user.verify-email');
 })->name('user.verify-email');
+
+Route::get('/admin/admin-mainpage', function () {
+    return view('admin.admin-mainpage');
+})->name('admin.admin-mainpage');

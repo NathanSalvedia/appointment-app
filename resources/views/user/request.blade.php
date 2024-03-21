@@ -48,16 +48,14 @@
                         </select>
                     </div>
                     </form>
-
                     <div class="form-group mt-3 pt-4">
                     <label for="fileInput">Choose a file:</label>
                     <input type="file" class="form-control-file" id="fileInput" name="fileInput">
                     </div>
-                    <button type="submit" class="btn btn-sm">Upload</button>
-
+                    <button type="submit" class="btn btn-lg">Upload</button>
                     <div class="form-floating mt-4 my-5">
                     <label for="floatingTextarea2">Purpose:</label>
-                    <textarea class="form-control"  id="floatingTextarea2" style="height: 100px"></textarea>
+                    <textarea class="form-control"  id="floatingTextarea2" style="height: 190px"></textarea>
                     </div>
                 </div>
                 <div class="mb-5 pt-5  text-right">
@@ -67,16 +65,16 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
+                              <h5 class="modal-title" id="exampleModalLabel"></h5>
                             </div>
                             <div class="modal-body">
-                                <h1 class="display-5 text-center">You've sucessfully Sent!!</h1>
+                                <h1 class="display-5 text-center text-success">Your Request has been Successfully Sent!</h1>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-lg" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-lg" data-dismiss="modal">Close
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+
                           </div>
                         </div>
                       </div>
