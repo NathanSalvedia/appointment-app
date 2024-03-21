@@ -4,12 +4,11 @@
 
 <div class="container mt-5 pl-5 pt-5">
     <div class="bg-white shadow-sm rounded mt-5 m-5 p-3">
-    <div class="row">
+       <div class="row">
         <div class="col-md-9 m-auto">
             <div class=" mt-4 my-5 ">
                 <h4 class="">Request Form</h4>
                </div>
-
            <div class="mt-3">
             <form class="cta-form">
                 <div>
@@ -41,16 +40,8 @@
              <button type="button" class="btn  btn-lg" id="saveButton">Save</button>
             </div>
         </div>
-    </div>
-    </div>
+      </div>
+  </div>
 </div>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-    document.getElementById('saveButton').addEventListener('click', function(event) {
-        event.preventDefault();
-        swal("Success!", "Your request has been saved!", "success")
-        .then((value) => {
-            window.location.href = "{{ route('user.status') }}"; // Redirect to status page
-        });
-    });
-</script>
+
+

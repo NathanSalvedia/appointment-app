@@ -1,5 +1,7 @@
 @extends('layouts.public')
 
+@section('title', 'Appointment App | Admin Form')
+
 <div class="container-fluid">
     <div class="row">
       <div class=".col">

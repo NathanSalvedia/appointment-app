@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'Appointment App ')
+@section('title', 'Appointment App | Dashboard ')
 
 <div class="container-fluid">
     <div class="row">

@@ -3,7 +3,7 @@
 @section('title', 'Appointment App | Settings ')
 
 <div class="container-fluid">
-    <div class="row">
+ <div class="row">
       <div class=".col">
         <div class="card">
             <div class="mb-5 pt-5  text-center"><a href="#">
@@ -35,12 +35,9 @@
                   <div class="form-btn text-center mt-5 pl-5 ">
 
                    <a class="btn bnt-lg" href='{{ route('user.profile')}}' role="button">Change Profile</a>
-
                     <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
                    </div>
-
                    <form class="form-password pl-5 mt-5">
-
                     <label for="username" class="form-label">User Name:</label>
                     <div class="input-group mb-5">
                         <input type="username" class="form-control form-control-lg" name="username" id="username" />
@@ -76,5 +73,5 @@
                 </form>
             </div>
          </div>
-        </div>
-       </div>
+    </div>
+ </div>
