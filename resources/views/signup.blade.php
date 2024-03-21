@@ -2,14 +2,13 @@
 
 @section('title', 'Appointment App | Signup')
 
-<
 <div class="auth-wrapper d-flex pt-5">
     <div class="col-md-4 m-auto ">
         <div class="bg-white shadow p-3 mb-3 bg-body-tertiary  rounded">
             <h1 class="display-3 text-center p-5 font-weight-bold text-dark">Sign Up</h1>
             <!--<p class="h1 text-center p-5 font-weight-bold text-dark">Signup</p>-->
             <div class="px-4 pt-4 mx-4 m-3 p-5">
-                <form class="form-signup">
+                <form class="form-signup" id="signupForm">
                     <div class="mb-4">
                         <label for="username" class="form-label text-dark">Username:</label>
                         <input type="text" class="form-control  form-control-lg" name="username" />
@@ -27,8 +26,7 @@
                         <input type="password" class="form-control  form-control-lg" name="password_confirmation" />
                     </div>
                     <div class="mt-2 mb-2 pt-2 d-grid">
-
-                        <a class="btn btn-dark btn-block"href='{{ route('user.verify-email')}}' role="button">Sign Up</a>
+                        <button type="submit" class="btn btn-dark btn-block">Sign Up</button>
                         <div class="cta-form text-center py-4 text-dark">
                             Already have an account?
                             <a href="{{ asset('login') }}" class=" text-dark text-decoration-none">Login</a>
@@ -39,3 +37,20 @@
         </div>
     </div>
 </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        setTimeout(function() {
+            swal({
+                title: "Success!",
+                text: "You have successfully registered!",
+                icon: "success",
+                button: "OK",
+            }).then(function() {
+                window.location.href = "{{ route('mainpage') }}"; // Redirect to dashboard
+            });
+        }, 1000);
+    });
+</script>
