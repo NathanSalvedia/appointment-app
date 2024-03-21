@@ -19,11 +19,11 @@ Route::get('/', function () {
 
 Route::get('/login', function () {
     return view('login');
-});
+})->name('login');
 
 Route::get('/mainpage', function () {
     return view('mainpage');
-});
+})->name('mainpage');
 
 
 Route::get('/signup', function () {
@@ -78,3 +78,30 @@ Route::get('/user/logout', function (){
 Route::get('/user/forgot', function (){
     return view('user.forgot');
 })->name('user.forgot');
+
+
+Route::get('/user/view', function (){
+    return view('user.view');
+})->name('user.view');
+
+
+Route::get('/user/create', function () {
+    return view('user.create');
+})->name('user.create');
+
+
+Route::get('/user/profile', function () {
+    return view('user.profile');
+})->name('user.profile');
+
+Route::get('/user/view', function () {
+    return view('user.view');
+})->name('user.view');
+
+Route::get('/user/verify-email', function () {
+    return view('user.verify-email');
+})->name('user.verify-email');
+
+Route::get('/admin/admin-mainpage', function () {
+    return view('admin.admin-mainpage');
+})->name('admin.admin-mainpage');

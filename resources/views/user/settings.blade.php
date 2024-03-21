@@ -16,6 +16,7 @@
             <ul class="list-unstyled pl-5">
               <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href="{{ asset('mainpage')}}">Home</a></li>
               <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('user.status')}}'>Appointment</a></li>
+              <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('user.settings')}}'>Settings</a></li>
               <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('user.logout')}}'>Logout</a></li>
             </ul>
            </div>
@@ -44,7 +45,7 @@
                     <div class="input-group mb-5">
                         <input type="username" class="form-control form-control-lg" name="username" id="username" />
                         <span class="input-group-addon">
-                          <a href='{{ route('user.username')}}' class="btn btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a href='{{ route('user.username')}}' class="btn btn-lg" title="Edit"><i class="fa fa-edit"></i></a>
                         </span>
                     </div>
 
@@ -52,7 +53,7 @@
                     <div class="input-group mb-5">
                         <input type="email" class="form-control form-control-lg" name="email" id="email" />
                         <span class="input-group-addon">
-                          <a href='{{ route('user.email')}}'' class="btn btn-outline-secondary " title="Edit"><i class="fa fa-edit"></i></a>
+                          <a href='{{ route('user.email')}}'' class="btn bnt-lg" title="Edit"><i class="fa fa-edit"></i></a>
                         </span>
                     </div>
 
@@ -60,7 +61,7 @@
                     <div class="input-group mb-5">
                         <input type="password" class="form-control form-control-lg" name="password" id="password" />
                         <span class="input-group-addon">
-                          <a href='{{ route('user.password')}}' class="btn btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a href='{{ route('user.password')}}' class="btn btn-lg" title="Edit"><i class="fa fa-edit"></i></a>
                         </span>
                     </div>
 
@@ -68,7 +69,7 @@
                     <div class="input-group" >
                         <input type="tel" class="form-control form-control-lg" name="phone" placeholder="+63" />
                         <span class="input-group-addon">
-                          <a href='{{ route('user.contact')}}' class="btn btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a href='{{ route('user.contact')}}' class="btn btn-lg" title="Edit"><i class="fa fa-edit"></i></a>
                         </span>
                     </div>
                 </div>
