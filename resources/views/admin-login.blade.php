@@ -18,7 +18,7 @@
                     <input type="password"  class="form-control form-control-lg" placeholder="Password" id="password" name="password" />
                  </div>
                  <div class="mt-2 mb-2 d-grid ">
-                    <a class="btn btn-dark btn-block  btn-lg  " href='{{ route('admin.admin-mainpage')}}' role="button">Login</a>
+                    <a class="btn btn-dark btn-block  btn-lg" href='{{ route('admin.admin-mainpage')}}' role="button">Login</a>
                     <!--<button-- type="submit" class="btn btn-block btn-light">Login</button-->
                  </div>
                 </div>

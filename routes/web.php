@@ -97,7 +97,6 @@ Route::get('/user/verify-email', function () {
     return view('user.verify-email');
 })->name('user.verify-email');
 
-
 Route::get('/admin', function () {
     return view('admin-login');
 });
@@ -116,4 +115,8 @@ Route::get('/admin/admin-form', function () {
 Route::get('/admin/admin-logout', function () {
     return view('admin.admin-logout');
 })->name('admin.admin-logout');
+
+Route::get('/admin/admin-request', function () {
+    return view('admin.admin-request');
+})->name('admin.admin-request');
 

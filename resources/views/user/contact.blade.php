@@ -34,7 +34,7 @@
              </a>
           </div>
           <div class="form-btn text-center mt-5 pl-5 ">
-            <a class="btn bnt-lg" href="change-profile.html" role="button">Change Profile</a>
+            <a class="btn bnt-lg" href='{{ route('user.profile')}}' role="button">Change Profile</a>
             <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
            </div>
            <form class="form-password pl-5">

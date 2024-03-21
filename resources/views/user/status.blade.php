@@ -47,7 +47,6 @@
                            </td>
                             <td width="150" class="text-right">
                                 <a href='{{ route('user.view')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-
                           </tr>
                         </tbody>
                        </table>
