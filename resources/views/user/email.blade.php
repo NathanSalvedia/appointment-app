@@ -3,7 +3,7 @@
 @section('title', 'Appointment App | Settings | Email')
 
 <div class="container-fluid">
-      <div class="row">
+    <div class="row">
         <div class=".col">
           <div class="card">
               <div class="mb-5 pt-5  text-center"><a href="#">
@@ -21,9 +21,9 @@
               </ul>
              </div>
           </div>
-        </div>
+         </div>
 
-         <div class="container">
+          <div class="container">
           <div class="col-md-9">
             <div class="pt-5">
               <p class="h2">Settings</p>
@@ -33,10 +33,10 @@
               <a href="#">
                 <img class="icon" alt="" src="{{ asset('img/icon.png')}}" />
                </a>
-            </div>
+             </div>
 
-            <div class="form-btn text-center mt-5 pl-5 ">
-              <a class="btn bnt-lg" href="change-profile.html" role="button">Change Profile</a>
+             <div class="form-btn text-center mt-5 pl-5 ">
+              <a class="btn bnt-lg" href='{{ route('user.profile')}}' role="button">Change Profile</a>
               <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
              </div>
              <form class="form-password pl-5">
@@ -44,17 +44,19 @@
               <div class="mb-5 pt-5">
                 <label for="email" class="form-text form-label">Current Email:</label>
                 <input type="email" class="form-control form-control-lg" name="email" id="email" />
-            </div>
-            <div class="mb-3 ">
+             </div>
+
+             <div class="mb-3 ">
                 <label for="email" class="form-text form-label">New Email:</label>
                 <input type="email" class="form-control form-control-lg" name="email"
-                    id="email_confirmation" />
-            </div>
+                id="email_confirmation" />
+             </div>
               <div class="mb-5 pt-5  text-right ">
                 <a class="btn btn-lg" href='{{ route('user.settings')}}' role="button">Back</a>
                 <button type="submit" class="btn  btn-lg" value="submit">Update</button>
-              </div>
+             </div>
           </form>
            </div>
-          </div>
-         </div>
+        </div>
+  </div>
+</div>

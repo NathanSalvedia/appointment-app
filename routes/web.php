@@ -30,11 +30,6 @@ Route::get('/signup', function () {
     return view('signup');
 });
 
-Route::get('/admin', function () {
-    return view('admin-login');
-});
-
-
 Route::get('/user/settings', function (){
        return view('user.settings');
 })->name('user.settings');
@@ -102,6 +97,25 @@ Route::get('/user/verify-email', function () {
     return view('user.verify-email');
 })->name('user.verify-email');
 
+Route::get('/admin', function () {
+    return view('admin-login');
+});
+
+
 Route::get('/admin/admin-mainpage', function () {
     return view('admin.admin-mainpage');
 })->name('admin.admin-mainpage');
+
+
+Route::get('/admin/admin-form', function () {
+    return view('admin.admin-form');
+})->name('admin.admin-form');
+
+
+Route::get('/admin/admin-logout', function () {
+    return view('admin.admin-logout');
+})->name('admin.admin-logout');
+
+Route::get('/admin/admin-request', function () {
+    return view('admin.admin-request');
+})->name('admin.admin-request');

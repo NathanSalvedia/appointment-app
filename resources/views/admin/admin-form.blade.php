@@ -1,5 +1,7 @@
 @extends('layouts.public')
 
+@section('title', 'Appointment App | Admin Form')
+
 <div class="container-fluid">
     <div class="row">
       <div class=".col">
@@ -12,7 +14,7 @@
             </div>
            <div class="nav">
             <ul class="list-unstyled pl-5">
-              <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('admin.admin-mainpage')}}'>Dashboard</a></li>
+              <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('admin.admin-mainpage')}}'>Home</a></li>
               <li class="pt-5 mb-2 pl-5 p-5 tex t-center"><a class="text-white" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
             </ul>
            </div>
@@ -28,7 +30,7 @@
               </div>
 
               <div class="mt-3">
-                <form class="admin-form">
+                <form class="admin-form" id="appointmentForm">
                      <div class="mb-5">
                       <label for="date">Select Date:</label>
                       <input type="date" id="date" name="date">
@@ -43,32 +45,28 @@
                         <label for="Phone" class="form-text form-label "> Contact Number:</label>
                         <input type="tel" class="form-control form-control-lg" name="phone" placeholder="+63" />
                         </div>
-                  </form>
-
-                <div class="mb-5 pt-5  text-right">
-
-                    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#exampleModal">Submit</button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel"></h5>
-                            </div>
-                            <div class="modal-body">
-                                <h1 class="display-5 text-center text-success">Appointment Has been Created</h1>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-lg" data-dismiss="modal">Close
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                        </div>
-                      </div>
+                </form>
+                <div class="text-right">
+                  <button type="button" class="btn btn-lg" id="submitBtn">Submit</button>
                 </div>
-              </div>
              </div>
-             </div>
-            </div>
-        </div>
-    </div>
-  </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+</div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    swal({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success",
+      button: "OK"
+    }).then(function() {
+      window.location.href = "{{ route('admin.admin-mainpage') }}";
+    });
+  });
+</script>

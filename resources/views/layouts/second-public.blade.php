@@ -27,5 +27,21 @@
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        setTimeout(function() {
+            swal({
+                title: "Success!",
+                text: "You have successfully registered!",
+                icon: "success",
+                button: "OK",
+            }).then(function() {
+                window.location.href = "{{ route('mainpage') }}"; // Redirect to dashboard
+            });
+        }, 1000);
+    });
+</script>
 </body>
 </html>

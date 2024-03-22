@@ -3,8 +3,6 @@
 
 @section('title', 'Appointment App | Logout')
 
-
-<main>
     <div class="container mt-5 p-5 ">
      <div class="row">
       <div class="col-md-7 m-auto">
@@ -24,5 +22,3 @@
       </div>
      </div>
     </div>
-   </main>
-
