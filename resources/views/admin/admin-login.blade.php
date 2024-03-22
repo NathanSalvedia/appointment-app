@@ -7,7 +7,7 @@
         <div class="bg-white shadow p-3 mb-4 bg-body-tertiary  rounded">
             <div class="text-center pt-5" >
                 <a>
-                <img class="logo" alt="" src="img/logo7.png" />
+                <img class="logo" alt="" src="{{ asset('img/logo9.png')}}" />
                 </a>
             </div>
             <div class=" px-3 pt-3 mx-4 m-3 p-5">

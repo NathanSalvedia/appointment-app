@@ -49,7 +49,7 @@
 
                 <div class="mb-3 pt-3  text-right">
 
-                    <button type="button" class="btn  btn-lg" onclick="SweetAlert()">Submit</button>
+                    <button type="button" class="btn btn-lg" id="submitBtn">Submit</button>
               </div>
              </div>
              </div>
@@ -57,3 +57,17 @@
         </div>
     </div>
   </div>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <script>
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    swal({
+      title: "Success!",
+      text: "The Appointment has been Created!",
+      icon: "success",
+      button: "OK"
+    }).then(function() {
+      window.location.href = "{{ route('admin.admin-mainpage') }}";
+    });
+  });
+</script>

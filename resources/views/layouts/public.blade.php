@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="School Registrar Appointment System" >
 
-    <link rel="icons" href="{{ asset('img/logo1.png')}}" />
+    <link rel="icon" href="{{ asset('img/logo1.png')}}" />
     <link rel="manifest" href="{{ asset('manifest.webmanifest')}}" />
 
     <title>@yield('title', 'Appointment App')</title>
@@ -41,14 +41,6 @@
         });
     }
 
-    function SweetAlert() {
-        swal("Good job!", "Appointment has been Created", "success").then((value) => {
-            if (value) {
-                window.location.href = "{{ route('admin.admin-mainpage') }}"; // Redirect to status page
-            }
-        });
-    }
-
     document.getElementById('saveButton').addEventListener('click', function(event) {
         event.preventDefault();
         swal("Success!", "Your request has been saved!", "success")
@@ -56,6 +48,7 @@
             window.location.href = "{{ route('user.status') }}"; // Redirect to status page
         });
     });
+
 
 </script>
 </body>

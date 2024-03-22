@@ -6,7 +6,7 @@
     <meta name="description" content="School Registrar Appointment System" >
 
 
-    <link rel="icons" href="{{ asset('img/logo1.png')}}" />
+    <link rel="icon" href="{{ asset('img/logo1.png')}}" />
     <link rel="manifest" href="{{ asset('manifest.webmanifest')}}" />
 
     <title>@yield('title', 'Appointment App')</title>
@@ -36,7 +36,7 @@
                 <ul class="navbar-nav ml-auto main-nav-list">
                     <li><a class="nav-item main-nav-link nav-cta" href='{{ route('user.status')}}'>Appointment</a></li>
                     <li><a class="nav-item main-nav-link" href='{{ route('user.settings')}}'>Settings</a></li>
-                    <li><a class="nav-item main-nav-link" href='{{ route('user.logout')}}'>Logout</a></li>
+                    <li><a class="nav-item main-nav-link" href="#" id="loginLink">Logout</a></li>
                   </ul>
             </div>
         </div>
@@ -47,5 +47,18 @@
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("loginLink").addEventListener("click", function(event) {
+        event.preventDefault();
+        swal("Are you sure you want to Logout?", {
+            buttons: ["Cancel", true],
+        }).then((value) => {
+            if (value) {
+                window.location.href = "{{ route('login') }}";
+            }
+        });
+    });
+</script>
 </body>
 </html>

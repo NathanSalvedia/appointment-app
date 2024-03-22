@@ -43,11 +43,24 @@
                 <input type="tel" class="form-control form-control-lg" name="phone" placeholder="+63" />
                 </div>
               <div class="mb-5 pt-5  text-right">
-                <a class="btn btn-lg" href='{{ route('user.settings')}}' role="button">Back</a>
-                <button type="submit" class="btn  btn-lg"  id="updateButton">Update</button>
+                <a class="btn btn-lg" role="button">Back</a>
+                <button type="button" class="btn  btn-lg"  id="updateButton">Update</button>
               </div>
             </form>
          </div>
        </div>
     </div>
 </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("updateButton").addEventListener("click", function() {
+        swal("Success!", "Your Contact Number has been updated Successfully!!.", "success")
+        .then((value) => {
+            window.location.href = '{{ route('user.settings') }}';
+        });
+    });
+    document.getElementById("backButton").addEventListener("click", function() {
+        window.location.href = '{{ route('user.settings') }}';
+    });
+</script>

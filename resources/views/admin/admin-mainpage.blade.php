@@ -15,7 +15,7 @@
                <div class="nav">
                 <ul class="list-unstyled pl-5">
                   <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('admin.admin-mainpage')}}'>Home</a></li>
-                  <li class="pt-5 mb-2 pl-5 p-5  text-center"><a class="text-white" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
+                  <li class="pt-5 mb-2 pl-5 p-5  text-center"><a class="text-white"  id="loginLink">Logout</a></li>
                 </ul>
                </div>
             </div>
@@ -58,7 +58,7 @@
                                 <td><h3>Pending</h3></td>
                                 <td>
                                     <a href='{{ route('admin.admin-request')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-                                    <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
+                                    <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" id="deleteButton"><i class="fa fa-times"></i></a>
                                   </td>
                             </tr>
                           </tbody>
@@ -69,7 +69,39 @@
     </div>
 </div>
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("deleteButton").addEventListener("click", function() {
+        swal({
+            title: "Are you sure?",
+            text: "You want, to delete this user!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("Success the user has been deleted!", {
+                    icon: "success",
+                });
+            } else {
+                swal("This will remain the same!");
+            }
+        });
+    });
 
+
+    document.getElementById("loginLink").addEventListener("click", function(event) {
+        event.preventDefault();
+        swal("Are you sure you want to Logout?", {
+            buttons: ["Cancel", true],
+        }).then((value) => {
+            if (value) {
+                window.location.href = "{{ route('admin.admin-login') }}";
+            }
+        });
+    });
+</script>
 
 
 

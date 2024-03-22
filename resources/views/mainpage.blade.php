@@ -25,7 +25,7 @@
                 <a href="#">
                   <img class="icons" alt="" src="img/icon2.png" />
                  </a>
-                <a class="footer-link p-4" href="tel:+63 1234 567 89">+63 1234 567 89</a
+                <a class="footer-link p-4" href="tel:+63 1234 567 89">+063  221 6246</a
                   ><br />
 
                   <a href="#">
