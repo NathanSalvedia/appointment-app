@@ -6,6 +6,9 @@
     <meta name="description" content="School Registrar Appointment System" >
 
 
+    <link rel="icon" href="{{ asset('img/logo1.png')}}" />
+    <link rel="manifest" href="{{ asset('manifest.webmanifest')}}" />
+
     <title>@yield('title', 'Appointment App')</title>
 
 
@@ -24,24 +27,38 @@
 <body>
 
 
-    <header class="header">
-        <a href="#">
-         <img class="logo" alt="" src="img/logo.png" />
-        </a>
-
-        <nav class="main-nav">
-         <ul class="main-nav-list">
-           <li><a class="main-nav-link nav-cta" href='{{ route('user.status')}}'>Appointment</a></li>
-           <li><a class="main-nav-link" href='{{ route('user.settings')}}'>Settings</a></li>
-           <li><a class="main-nav-link" href='{{ route('user.logout')}}'>Logout</a></li>
-         </ul>
-       </nav>
-      </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand pl-5">
+                <img class="logo" alt="SPC logo" src="img/logo.png" width="170"/>
+            </a>
+            <div class="collapse navbar-collapse" id="navbar-toggler">
+                <ul class="navbar-nav ml-auto main-nav-list">
+                    <li><a class="nav-item main-nav-link nav-cta" href='{{ route('user.status')}}'>Appointment</a></li>
+                    <li><a class="nav-item main-nav-link" href='{{ route('user.settings')}}'>Settings</a></li>
+                    <li><a class="nav-item main-nav-link" href="#" id="loginLink">Logout</a></li>
+                  </ul>
+            </div>
+        </div>
+    </nav>
 
       @yield('content')
 
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("loginLink").addEventListener("click", function(event) {
+        event.preventDefault();
+        swal("Are you sure you want to Logout?", {
+            buttons: ["Cancel", true],
+        }).then((value) => {
+            if (value) {
+                window.location.href = "{{ route('login') }}";
+            }
+        });
+    });
+</script>
 </body>
 </html>

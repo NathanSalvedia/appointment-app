@@ -3,8 +3,6 @@
 
 @section('title', 'Appointment App | Logout')
 
-
-<main>
     <div class="container mt-5 p-5 ">
      <div class="row">
       <div class="col-md-7 m-auto">
@@ -18,11 +16,24 @@
             <h1 class="">You've Log out</h1>
            </div>
            <div class="text-center mb-5">
-              <p class="h2">If you want to login again Click <a href="{{ asset('login')}}">Here</a> to Login </p>
+              <p class="h2">If you want to login again Click <a href="{{ asset('login')}}" id="loginLink">Here</a> to Login </p>
            </div>
           </div>
       </div>
      </div>
     </div>
-   </main>
 
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        document.getElementById("loginLink").addEventListener("click", function(event) {
+            event.preventDefault();
+            swal("Are you sure you want to Logout?", {
+                buttons: ["Cancel", true],
+            }).then((value) => {
+                if (value) {
+                    window.location.href = "{{ route('login') }}";
+                }
+            });
+        });
+    </script>
