@@ -97,9 +97,9 @@ Route::get('/user/verify-email', function () {
     return view('user.verify-email');
 })->name('user.verify-email');
 
-Route::get('/admin', function () {
-    return view('admin-login');
-});
+Route::get('/admin/admin-login', function () {
+    return view('admin.admin-login');
+})->name('admin.admin-login');
 
 
 Route::get('/admin/admin-mainpage', function () {

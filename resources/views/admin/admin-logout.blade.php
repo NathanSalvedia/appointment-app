@@ -15,7 +15,7 @@
            <h1 class="">You've Log out</h1>
           </div>
           <div class="text-center mb-5">
-             <p class="h2">If you want to login again Click <a href="{{ asset('admin-login')}}">Here</a> to Login </p>
+             <p class="h2">If you want to login again Click <a href='{{ route('admin.admin-login')}}'>Here</a> to Login </p>
           </div>
          </div>
      </div>
