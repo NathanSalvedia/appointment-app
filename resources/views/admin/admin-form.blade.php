@@ -15,7 +15,7 @@
            <div class="nav">
             <ul class="list-unstyled pl-5">
               <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('admin.admin-mainpage')}}'>Home</a></li>
-              <li class="pt-5 mb-2 pl-5 p-5 tex t-center"><a class="text-white" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
+              <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
             </ul>
            </div>
         </div>
@@ -47,26 +47,9 @@
                         </div>
                   </form>
 
-                <div class="mb-5 pt-5  text-right">
+                <div class="mb-3 pt-3  text-right">
 
-                    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#exampleModal">Submit</button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel"></h5>
-                            </div>
-                            <div class="modal-body">
-                                <h1 class="display-5 text-center text-success">Appointment Has been Created</h1>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-lg" data-dismiss="modal">Close
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
+                    <button type="button" class="btn  btn-lg" onclick="SweetAlert()">Submit</button>
               </div>
              </div>
              </div>

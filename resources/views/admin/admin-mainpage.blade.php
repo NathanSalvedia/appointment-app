@@ -43,11 +43,11 @@
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
-                              <th scope="col"><h3>ID</h3></th>
-                              <th scope="col"><h3>Username</h3></th>
-                              <th scope="col"><h3>Email</h3></th>
-                              <th scope="col"><h3>Status</h3></th>
-                              <th scope="col"><h3>Actions</h3></th>
+                              <th scope="col"><h2>ID</h2></th>
+                              <th scope="col"><h2>Username</h2></th>
+                              <th scope="col"><h2>Email</h2></th>
+                              <th scope="col"><h2>Status</h2></th>
+                              <th scope="col"><h2>Actions</h2></th>
                             </tr>
                           </thead>
                           <tbody>

@@ -53,7 +53,7 @@
              </div>
               <div class="mb-5 pt-5  text-right ">
                 <a class="btn btn-lg" href='{{ route('user.settings')}}' role="button">Back</a>
-                <button type="submit" class="btn  btn-lg" value="submit">Update</button>
+                <button type="submit" class="btn  btn-lg"  id="emailButton">Update</button>
              </div>
           </form>
            </div>

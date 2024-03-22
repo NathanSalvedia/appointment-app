@@ -32,8 +32,7 @@
                     <img class="icons" alt="" src="img/icon1.png" />
                    </a>
                   <a class="footer-link" href="mailto:spc.edu.ph@gmail.com"
-                  >spc.edu.ph@gmail.com</a
-
+                  >spc.edu.ph@gmail.com</a>
               </p>
             </address>
           </ul>

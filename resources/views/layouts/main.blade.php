@@ -6,6 +6,9 @@
     <meta name="description" content="School Registrar Appointment System" >
 
 
+    <link rel="icons" href="{{ asset('img/logo1.png')}}" />
+    <link rel="manifest" href="{{ asset('manifest.webmanifest')}}" />
+
     <title>@yield('title', 'Appointment App')</title>
 
 
