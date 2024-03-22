@@ -1,15 +1,12 @@
 @extends('layouts.public')
 
-@section('title', 'Appointment App | Settings | Password ')
-
+@section('title', 'Appointment App | Settings | Password')
 
 <div class="container-fluid">
     <div class="row">
         <div class=".col">
           <div class="card">
-              <div class="mb-5 pt-5  text-center"><a href="#">
-                <img class="icon" alt="" src="{{ asset('img/icon.png')}}" />
-               </a></div>
+              <div class="mb-5 pt-5  text-center"><a href="#"><img class="icon" alt="" src="{{ asset('img/icon.png')}}" /></a></div>
               <div class="mb-5 text-center">
                 <h4 class="heading"> Kent Zorel Elnas</h4>
               </div>
@@ -39,10 +36,9 @@
 
             <div class="form-btn text-center mt-5 pl-5 ">
               <a class="btn bnt-lg" href='{{ route('user.profile')}}' role="button">Change Profile</a>
-              <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
              </div>
 
-             <form class="form-password pl-5">
+             <form class="form-password pl-5" id="updateForm">
               <div class="mb-5 pt-5 my-3  pl-5">
                   <label for="password" class="form-label">New  Password:</label>
                   <input type="password" class="form-control form-control-lg" name="password" id="password" />
@@ -54,11 +50,24 @@
               </div>
 
               <div class="mb-5 pt-5  text-right ">
-                <a class="btn btn-lg" href='{{route('user.settings')}}' role="button">Back</a>
-                <button type="submit" class="btn  btn-lg" value="submit">Update</button>
+                <a class="btn btn-lg" id="backButton" role="button">Back</a>
+                <button type="button" class="btn btn-lg" id="updateButton">Update</button>
               </div>
           </form>
            </div>
         </div>
     </div>
 </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("updateButton").addEventListener("click", function() {
+        swal("Success!", "Your Password has been Successfully Changed!!.", "success")
+        .then((value) => {
+            window.location.href = '{{ route('user.settings') }}';
+        });
+    });
+    document.getElementById("backButton").addEventListener("click", function() {
+        window.location.href = '{{ route('user.settings') }}';
+    });
+</script>

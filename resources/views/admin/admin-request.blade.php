@@ -46,9 +46,18 @@
              </div>
               <div class="mb-5 pt-5  text-right">
                 <a class="btn btn-lg" href='{{ route('admin.admin-form')}}' role="button">Set Appointment</a>
-                <button type="submit" class="btn  btn-lg" value="submit">Submit</button>
+                <button type="button" class="btn btn-lg" id="submitButton">Submit</button>
               </div>
             </div>
           </div>
     </div>
 </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("submitButton").addEventListener("click", function() {
+        swal("Success!", "Your message has been Successfully Sent!").then(() => {
+            window.location.href = "{{ route('admin.admin-mainpage') }}";
+        });
+    });
+</script>

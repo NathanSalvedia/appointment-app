@@ -58,7 +58,7 @@
                                 <td><h3>Pending</h3></td>
                                 <td>
                                     <a href='{{ route('admin.admin-request')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-                                    <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
+                                    <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" id="deleteButton"><i class="fa fa-times"></i></a>
                                   </td>
                             </tr>
                           </tbody>
@@ -68,3 +68,25 @@
           </div>
     </div>
 </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("deleteButton").addEventListener("click", function() {
+        swal({
+            title: "Are you sure?",
+            text: "You want, to delete this user!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("Success the user has been deleted!", {
+                    icon: "success",
+                });
+            } else {
+                swal("This will remain the same!");
+            }
+        });
+    });
+</script>

@@ -61,8 +61,8 @@
 <script>
   document.getElementById('submitBtn').addEventListener('click', function() {
     swal({
-      title: "Good job!",
-      text: "You clicked the button!",
+      title: "Success!",
+      text: "The Appointment has been Created!",
       icon: "success",
       button: "OK"
     }).then(function() {

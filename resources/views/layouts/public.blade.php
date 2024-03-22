@@ -31,7 +31,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
     function showSweetAlert() {
-        swal("Good job!", "Your request has been successfully sent!", "success").then((value) => {
+        swal("Success", "Your request has been successfully sent!", "success").then((value) => {
             if (value) {
                 window.location.href = "{{ route('user.status') }}"; // Redirect to status page
             }
@@ -40,7 +40,7 @@
 
     document.getElementById('saveButton').addEventListener('click', function(event) {
         event.preventDefault();
-        swal("Success!", "Your request has been saved!", "success")
+        swal("Success!", "Your request has been Successfully Changed!!", "success")
         .then((value) => {
             window.location.href = "{{ route('user.status') }}"; // Redirect to status page
         });
