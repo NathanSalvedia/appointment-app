@@ -16,14 +16,9 @@
 
     <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{ asset('css/general.css') }}" rel="stylesheet">
-
-
-
-
 </head>
 
 
-  </style>
 <body>
 
 
@@ -32,5 +27,26 @@
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    function showSweetAlert() {
+        swal("Success", "Your request has been successfully sent!", "success").then((value) => {
+            if (value) {
+                window.location.href = "{{ route('user.status') }}"; // Redirect to status page
+            }
+        });
+    }
+
+    document.getElementById('saveButton').addEventListener('click', function(event) {
+        event.preventDefault();
+        swal("Success!", "Your request has been Successfully Changed!!", "success")
+        .then((value) => {
+            window.location.href = "{{ route('user.status') }}"; // Redirect to status page
+        });
+    });
+</script>
+
+
 </body>
 </html>

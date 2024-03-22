@@ -15,10 +15,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+
 
 </head>
+    <style>
+        body{
+        background-color: #f1f3f5;
+        font-family: "open Sans", 'san-serif';
+    }
 
+     .btn{
+        font-size: 27px;
+     }
+
+    </style>
 <body>
 
 
@@ -26,22 +36,7 @@
 
 
 
+
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-    document.getElementById('signupForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        setTimeout(function() {
-            swal({
-                title: "Success!",
-                text: "You have successfully registered!",
-                icon: "success",
-                button: "OK",
-            }).then(function() {
-                window.location.href = "{{ route('mainpage') }}"; // Redirect to dashboard
-            });
-        }, 1000);
-    });
-</script>
 </body>
 </html>

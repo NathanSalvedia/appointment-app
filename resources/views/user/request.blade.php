@@ -1,6 +1,8 @@
 @extends('layouts.public')
 
-@section('title', 'Appointment App | Settings | Request ')
+@section('title', 'Appointment App | Request ')
+
+
 
 <div class="container-fluid">
     <div class="row">
@@ -24,12 +26,12 @@
         </div>
        </div>
 
-    <div class="container mt-5 pl-5 pt-5">
+     <div class="container mt-5 pl-5 pt-5">
        <div class="bg-white shadow-sm rounded mt-5 m-5 p-3">
           <div class="row">
             <div class="col-md-9 m-auto">
               <div class=" mt-4 my-5 ">
-               <h4 class="">Request Form</h4>
+               <h2 class="">Request Form</h2>
               </div>
 
               <div class="mt-3">
@@ -59,12 +61,12 @@
                 </div>
               </div>
               <div class="mb-5 pt-5  text-right">
-                <a class="btn btn-lg" href="appointment-done.html" role="button">Submit</a>
+                <button type="button" class="btn  btn-lg" onclick="showSweetAlert()">Submit</button>
                 <!--<button type="submit" class="btn  btn-lg">Submit</button>-->
               </div>
-              </div>
-          </div>
-             </div>
-            </div>
-        </div>
+           </div>
+         </div>
+      </div>
     </div>
+   </div>
+</div>
