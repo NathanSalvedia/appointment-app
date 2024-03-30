@@ -29,7 +29,7 @@
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-
+    <script src="{{ asset('js/script.js')}}"></script>
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>

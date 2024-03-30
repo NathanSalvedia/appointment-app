@@ -3,19 +3,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class=".col">
-            <div class="card">
-                <div class="mb-5 pt-5  text-center"><a href="#">
-                  <img class="icon" alt="" src="{{ asset('img/logo7.png') }}" />
-                 </a></div>
-                <div class="mb-5 text-center">
-                  <h4 class="heading"> Hi Admin</h4>
+            <div class="card-sidebar">
+                <div class="mb-5 pt-5 pl-3"><a href="#">
+                    <img  src="{{ asset('img/logo7.png')}}" alt="SPC logo"/>
+                   </a>
                 </div>
-               <div class="nav">
-                <ul class="list-unstyled pl-5">
-                  <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('admin.admin-mainpage')}}'>Home</a></li>
-                  <li class="pt-5 mb-2 pl-5 p-5  text-center"><a class="text-white" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
-                </ul>
-               </div>
+                  <div class="mb-5 pl-3 text-white">
+                     <p class="cta-text">Hi Admin</p>
+                  </div>
+                 <div class="nav">
+                  <ul class="list-unstyled">
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin.admin-mainpage')}}">Dashboard</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
+                  </ul>
+                 </div>
             </div>
           </div>
 

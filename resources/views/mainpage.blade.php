@@ -9,12 +9,14 @@
         <div class="text-center">
           <h1 class="display-2 p-5 m-5 text-white">"By Scheduling an Appointment you're taking"</h1>
          </div>
-         <p class="h1 text-center my-5 pt-5 text-white">
+         <p class="main-text text-center my-5 pt-5 text-white">
           A steps towards making your dreams a Reality
          </p>
         <div class="main-btn text-center">
-          <a class="btn btn--form" href='{{ route('user.request')}}' role="button">Request now!!</a>
-          <!--<button href="#appointment.html" class="btn btn--form">Request now!!</button>-->
+
+        <a class="btn cta--btnn" href='{{ route('user.request')}}' role="button">Request now!</a>
+
+        <!--<button href='{{ route('user.request')}}' class="btn btn--form">Request now!!</button>-->
         </div>
       </div>
       <footer class="footer">

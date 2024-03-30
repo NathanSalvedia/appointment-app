@@ -23,8 +23,6 @@
 
 
 </head>
-
-  </style>
 <body>
 
 

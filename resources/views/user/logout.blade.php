@@ -23,17 +23,3 @@
      </div>
     </div>
 
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-        document.getElementById("loginLink").addEventListener("click", function(event) {
-            event.preventDefault();
-            swal("Are you sure you want to Logout?", {
-                buttons: ["Cancel", true],
-            }).then((value) => {
-                if (value) {
-                    window.location.href = "{{ route('login') }}";
-                }
-            });
-        });
-    </script>
