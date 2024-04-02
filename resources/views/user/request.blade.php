@@ -20,12 +20,11 @@
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.status')}}'>Appointment</a></li>
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.settings')}}'>Settings</a></li>
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.logout')}}' id="loginLink">Logout</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
               </ul>
              </div>
         </div>
        </div>
-
 
        <div class="container">
         <div class="bg-white shadow-sm rounded mt-5 m-5 p-3">
@@ -36,6 +35,7 @@
                       </div>
 
                       <form action="" class="cta-form">
+                        @csrf
                         <div class="row my-5">
                             <div class="col-lg-3 mb-3">
                                 <label for="firstname" class="form-label text-dark">First Name:</label>

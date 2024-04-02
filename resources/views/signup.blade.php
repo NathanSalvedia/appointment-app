@@ -3,7 +3,7 @@
 @section('title', 'Appointment App | Signup')
 
 <div class="auth-wrapper d-flex pt-5">
-    <div class="col-md-4 m-auto ">
+    <div class="col-md-5 m-auto ">
         <div class="bg-white shadow p-3 mb-3 bg-body-tertiary  rounded">
             <h1 class="display-3 text-center p-5 font-weight-bold text-dark">Sign Up</h1>
             <!--<p class="h1 text-center p-5 font-weight-bold text-dark">Signup</p>-->
@@ -11,22 +11,22 @@
                 <form>
                     @csrf
                     <div class="row">
-                        <div class="col-lg-6 mb-3">
+                        <div class="col-md-6 mb-3">
                             <label for="firstname" class="form-label text-dark">First Name:</label>
                             <input type="text" class="form-control  form-control-lg" name="firstname" />
                         </div>
 
-                        <div class="col-lg-6 mb-3">
+                        <div class="col-md-6 mb-3">
                             <label for="middlename" class="form-label text-dark">Middle Name:</label>
                             <input type="text" class="form-control  form-control-lg" name="middlename" />
                         </div>
 
-                        <div class="col-lg-6 mb-3">
+                        <div class="col-md-6 mb-3">
                             <label for="lastname" class="form-label text-dark">Last Name:</label>
                             <input type="text" class="form-control  form-control-lg" name="lastname" />
                         </div>
 
-                        <div class="col-lg-6 mb-3">
+                        <div class="col-md-6 mb-3">
                             <label for="phone" class="form-label text-dark">Phone Number:</label>
                             <input type="text" class="form-control  form-control-lg" name="phone"  placeholder="+63"/>
                         </div>

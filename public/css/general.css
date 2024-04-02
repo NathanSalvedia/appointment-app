@@ -21,9 +21,16 @@ body
 
 .card-sidebar{
   background-color: #76292A;
-  height: 110vh;
+  min-height: 110vh;
   width: 300px;
 }
+
+ .sidebar{
+    background-color: #76292A;
+    min-height: 110vh;
+
+ }
+
 
 .heading{
   color: #fff;
@@ -32,7 +39,7 @@ body
 
 
 .cta-text{
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .nav{
@@ -115,3 +122,4 @@ body
 .form-control-plaintext{
     font-size: 1.8rem;
 }
+

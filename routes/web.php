@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MainpageController;
+use App\Http\Controllers\RequestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +23,8 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::get('/mainpage', function () {
-    return view('mainpage');
-})->name('mainpage');
+Route::get('/mainpage', [MainpageController::class, 'index'])->name('mainpage');
+
 
 
 Route::get('/signup', function () {
@@ -34,26 +35,9 @@ Route::get('/user/settings', function (){
        return view('user.settings');
 })->name('user.settings');
 
-
-Route::get('/user/username', function (){
-    return view('user.username');
-})->name('user.username');
-
-
-Route::get('/user/password', function (){
-    return view('user.password');
-})->name('user.password');
-
-
-Route::get('/user/email', function (){
-    return view('user.email');
-})->name('user.email');
-
-
-Route::get('/user/contact', function (){
-    return view('user.contact');
-})->name('user.contact');
-
+Route::get('/user/edit-profile', function (){
+    return view('user.edit-profile');
+})->name('user.edit-profile');
 
 Route::get('/user/request', function (){
     return view('user.request');
@@ -119,4 +103,5 @@ Route::get('/admin/admin-logout', function () {
 Route::get('/admin/admin-request', function () {
     return view('admin.admin-request');
 })->name('admin.admin-request');
+
 

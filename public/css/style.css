@@ -1,11 +1,25 @@
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
+.container {
+    /* 1140px */
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
   }
 
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 9.6rem;
+    padding: 0 4.8rem;
+    position: relative;
+  }
+
+  .logo {
+    height: 11.875rem;
+    margin-top: .5rem;
+  }
 
 
   .main-nav-list {
@@ -45,11 +59,11 @@
     }
 
 
-    .cta--btnn{
+
+    .btn-cta{
         background-color: #000;
         color: #fff;
         cursor: pointer;
-        font-weight: bold;
         position: relative;
         width: 18.75rem;
         font-size: 2rem;
@@ -57,48 +71,44 @@
         border-radius: 0.5625rem;
         transition: all 0.3s;
         margin: 1.3rem 0.625rem;
+    }
 
-      }
-
-
-      .cta--btnn:hover {
+    .btn-cta:hover{
         background-color: #fff;
         color: #000;
-        text-align: center;
-      }
-
+    }
 
 
     .section-main{
-      width: 100%;
-      height: 100vh;
+      min-height: 100vh;
       background-color: #76292A;
-
   }
 
-
-
-
   .main{
-    padding: 9.375rem;
+    padding: 4rem;
+   }
+
+   .heading-primary{
+    font-size: 6rem;
    }
 
   .main-text{
     font-size: 3.2rem;
   }
 
+  .footer{
+    padding: 12.8rem 0;
+  }
 
   .info-col{
     float: right;
   }
 
-
-
   .footer-heading{
-    font-size: 1.625rem;
+    font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.6;
-    margin-left: 5.563rem;
+    margin-bottom: 4rem;
     color: #fff;
 
   }
@@ -106,7 +116,7 @@
   .footer-link:link
    {
     text-decoration: none;
-    font-size: 1.625rem;
+    font-size: 1.8rem;
     color: #fff;
     font-weight: 500;
     margin-right: 2.5rem;

@@ -22,50 +22,74 @@
 
 
           <div class="container py-4">
-            <div class="bg-img p-3 mb-2  text-white">
-                <div class="row">
-                    <div class=".col mx-3">
-                        <h1 class="display-4">Inbox</h1>
-                    </div>
+            <div class="bg-white shadow-sm rounded mt-5 p-5">
+              <div class="row">
+                 <div class="col-md-11 m-auto">
+                    <div class="mt-4 mb-4">
+                        <p class="cta-text font-weight-bold">Inbox</p>
+                      </div>
 
-                    <div class=".col">
-                        <img src="{{ asset('img/icon10.png')}}" />
-                    </div>
-                </div>
+                     <form action="" class="cta-form">
+                        <div class="row my-3">
+                            <div class="col-lg-3  mb-3">
+                            <label for="firstName" class="form-label">First Name:</label>
+                            <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="Kent zorel" readonly>
+                        </div>
+
+                        <div class="col-lg-3  mb-3">
+                            <label for="firstName" class="form-label">Middle Name:</label>
+                            <input type="text" class="form-control form-control-lg bg-white" id="middletName" value="B" readonly>
+                        </div>
+
+                        <div class="col-lg-3  mb-3">
+                            <label for="lastname" class="form-label text-dark">Last Name:</label>
+                            <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="Elnas" readonly>
+                        </div>
+
+                        <div class="col-lg-3  mb-3">
+                            <label for="phone" class="form-label text-dark">Phone Number:</label>
+                            <input type="text" class="form-control form-control-lg bg-white" id="contactNumber" value="09979800852" readonly>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="username" class="form-label">User Name:</label>
+                                <div class="input-group mb-5">
+                                  <input type="text" class="form-control form-control-lg bg-white" id="userName" value="Kentzorel" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="email" class="form-text form-label"> Email:</label>
+                                <div class="input-group mb-5">
+                                <input type="text" class="form-control form-control-lg bg-white" id="Email" value="kentzorel2021@gmail.com" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 mt-3">
+                            <p class="h2 text-lg-left">Subject: Request for COR</p>
+                        </div>
+
+                        <div class="form-group mt-3 pt-4">
+                            <img src="{{ asset('img/receipt.jpg')}}" width="250px" height="160px" />
+                         </div>
+
+                         <div class="form-floating mb-3 mt-5">
+                            <label for="floatingTextarea2"><p>Comment:</p></label>
+                            <textarea class="form-control"  id="floatingTextarea2" style="height: 150px"></textarea>
+                          </div>
+                          </form>
+                     </form>
+
+                     <div class="mb-2 pt-4  text-right">
+                        <a class="btn bnt-lg btn--cta text-white text-decoration-none" href='{{ route('admin.admin-form')}}' role="button">Set Appointment</a>
+                        <button type="submit" class="btn bnt-lg btn--cta text-white text-decoration-none" id="submitButton">Submit</button>
+                      </div>
+                 </div>
+              </div>
             </div>
 
-            <div class="bg-white shadow-sm rounded mt-5  p-5 pt-3">
-                <div class="row">
-                    <div class="col-md-9">
-                      <div class="mb-5">
-                        <p class="h2 text-lg-left">Email: Kentzorelelnas.202200472@gmail.com</p>
-                      </div>
-
-                      <div class="py-5">
-                        <p class="h2 text-lg-left">Subject: Request for COR</p>
-                      </div>
-
-                      <div class="row">
-                        <div class=".col mx-2">
-                            <p class="text-lg-left"><img src="{{ asset('img/icon13.png')}}" width="35px
-                                " >/</p>
-                        </div>
-                        <div class=".col">
-                        <p class=text-lg-left"><button type="button" class="btn btn-lg">form.docs</button></p>
-                        </div>
-                      </div>
-
-                      <div class="form-floating mt-4 my-5">
-                        <label for="floatingTextarea2"><h3>Comment:</h3></label>
-                        <textarea class="form-control"  id="floatingTextarea2" style="height: 190px"></textarea>
-                     </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 pt-3  text-right">
-                    <a class="btn btn-lg" href='{{ route('admin.admin-form')}}' role="button">Set Appointment</a>
-                    <button type="submit" class="btn  btn-lg" id="submitButton">Submit</button>
-                  </div>
             </div>
           </div>
     </div>

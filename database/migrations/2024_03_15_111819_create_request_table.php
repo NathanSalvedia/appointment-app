@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('request_form');
             $table->string('first_name');
-            $table->string('middl_ename');
+            $table->string('middle_name');
             $table->string('last_name');
             $table->integer('phone_number');
             $table->string('typesof_requirements');

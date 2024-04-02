@@ -23,7 +23,7 @@
           </div>
 
           <div class="container">
-             <div class="mt-5  text-center mb-5">
+             <div class="mt-5 text-center mb-5">
                 <h1 class="display-4">Welcome to Dashboard</h1>
              </div>
             <div class="row">

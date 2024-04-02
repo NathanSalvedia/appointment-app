@@ -17,7 +17,7 @@
                     <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
                     <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.status')}}'>Appointment</a></li>
                     <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.settings')}}'>Settings</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.logout')}}'>Logout</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
                   </ul>
                  </div>
             </div>
@@ -45,7 +45,7 @@
                            <td class="text-right ml-5">
                            Pending
                            </td>
-                            <td width="150" class="text-right">
+                            <td class="text-right">
                                 <a href='{{ route('user.view')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
                           </tr>
                         </tbody>
@@ -55,6 +55,22 @@
           </div>
     </div>
 </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("loginLink").addEventListener("click", function(event) {
+        event.preventDefault();
+        swal("Are you sure you want to Logout?", {
+            buttons: ["Cancel", true],
+        }).then((value) => {
+            if (value) {
+                window.location.href = "{{ route('login') }}";
+            }
+        });
+    });
+</script>
+
+
 
 
 

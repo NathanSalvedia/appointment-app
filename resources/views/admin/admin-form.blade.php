@@ -5,19 +5,20 @@
 <div class="container-fluid">
     <div class="row">
       <div class=".col">
-        <div class="card">
-            <div class="mb-5 pt-5  text-center"><a href="#">
-              <img class="icon" alt="SPC logo" src="{{ asset('img/logo7.png')}}" />
-             </a></div>
-            <div class="mb-5 text-center">
-              <h4 class="heading">Hi Admin</h4>
+        <div class="card-sidebar">
+            <div class="mb-5 pt-5 pl-3"><a href="#">
+                <img  src="{{ asset('img/logo7.png')}}" alt="SPC logo"/>
+               </a>
             </div>
-           <div class="nav">
-            <ul class="list-unstyled pl-5">
-              <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('admin.admin-mainpage')}}'>Home</a></li>
-              <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
-            </ul>
-           </div>
+              <div class="mb-5 pl-3 text-white">
+                 <p class="cta-text">Hi Admin</p>
+              </div>
+             <div class="nav">
+              <ul class="list-unstyled">
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin.admin-mainpage')}}">Dashboard</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
+              </ul>
+             </div>
         </div>
       </div>
 
@@ -25,10 +26,9 @@
         <div class="bg-white  show-sm rounded mt-5 m-5 p-5">
           <div class="row">
             <div class="col-md-9 m-auto p-3 px-4 ">
-              <div class="mt-4 my-5 ">
-               <h1 class="display-6">Create an Appointment</h1>
-              </div>
-
+                <div class="mt-4 mb-4">
+                    <p class="cta-text font-weight-bold">Create an Appointment</p>
+                </div>
               <div class="mt-3">
                 <form class="admin-form">
                      <div class="mb-5">
@@ -48,8 +48,7 @@
                   </form>
 
                 <div class="mb-3 pt-3  text-right">
-
-                    <button type="button" class="btn btn-lg" id="submitBtn">Submit</button>
+                    <button type="button" class="btn bnt-lg btn--cta text-white text-decoration-none" id="submitBtn">Submit</button>
               </div>
              </div>
              </div>
