@@ -3,7 +3,7 @@
 body
 {
   background-color: #e9ecef;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn--cta{
@@ -21,7 +21,7 @@ body
 
 .card-sidebar{
   background-color: #76292A;
-  min-height: 110vh;
+  min-height: 119vh;
   width: 300px;
 }
 

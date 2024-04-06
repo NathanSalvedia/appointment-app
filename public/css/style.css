@@ -1,4 +1,8 @@
 
+body{
+    font-family: 'Montserrat';
+}
+
 .container {
     /* 1140px */
     max-width: 120rem;

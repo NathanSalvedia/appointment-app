@@ -36,30 +36,30 @@
                             <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="Kent zorel" readonly>
                         </div>
 
-                        <div class="col-lg-3  mb-3">
+                        <div class="col-md-3  mb-3">
                             <label for="firstName" class="form-label">Middle Name:</label>
                             <input type="text" class="form-control form-control-lg bg-white" id="middletName" value="B" readonly>
                         </div>
 
-                        <div class="col-lg-3  mb-3">
+                        <div class="col-md-3  mb-3">
                             <label for="lastname" class="form-label text-dark">Last Name:</label>
                             <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="Elnas" readonly>
                         </div>
 
-                        <div class="col-lg-3  mb-3">
+                        <div class="col-md-3  mb-3">
                             <label for="phone" class="form-label text-dark">Phone Number:</label>
                             <input type="text" class="form-control form-control-lg bg-white" id="contactNumber" value="09979800852" readonly>
                         </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <label for="username" class="form-label">User Name:</label>
                                 <div class="input-group mb-5">
                                   <input type="text" class="form-control form-control-lg bg-white" id="userName" value="Kentzorel" readonly>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <label for="email" class="form-text form-label"> Email:</label>
                                 <div class="input-group mb-5">
                                 <input type="text" class="form-control form-control-lg bg-white" id="Email" value="kentzorel2021@gmail.com" readonly>
@@ -74,6 +74,11 @@
                         <div class="form-group mt-3 pt-4">
                             <img src="{{ asset('img/receipt.jpg')}}" width="250px" height="160px" />
                          </div>
+
+                         <div class="form-floating mt-4">
+                            <label for="floatingPlaintextInput">Purpose:</label>
+                            <input type="text" readonly class="form-control form-control-lg bg-white" id="floatingPlaintextInput"  placeholder="For Scholarship" value="For Scholarship">
+                          </div>
 
                          <div class="form-floating mb-3 mt-5">
                             <label for="floatingTextarea2"><p>Comment:</p></label>

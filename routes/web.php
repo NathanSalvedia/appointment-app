@@ -25,6 +25,8 @@ Route::get('/login', function () {
 
 Route::get('/mainpage', [MainpageController::class, 'index'])->name('mainpage');
 
+Route::get('/user/request', [RequestController::class, 'index'])->name('user.request');
+Route::post('/user/request', [RequestController::class,'store'])->name('user.request');
 
 
 Route::get('/signup', function () {

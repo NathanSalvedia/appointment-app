@@ -37,22 +37,22 @@
                       <form action="" class="cta-form">
                         @csrf
                         <div class="row my-5">
-                            <div class="col-lg-3 mb-3">
+                            <div class="col-md-3 mb-3">
                                 <label for="firstname" class="form-label text-dark">First Name:</label>
                                 <input type="text" class="form-control  form-control-lg" name="firstname" required/>
                             </div>
 
-                            <div class="col-lg-3 mb-3">
+                            <div class="col-md-3 mb-3">
                                 <label for="middlename" class="form-label text-dark">Middle Name:</label>
                                 <input type="text" class="form-control  form-control-lg" name="middlename" required/>
                             </div>
 
-                            <div class="col-lg-3 mb-3">
+                            <div class="col-md-3 mb-3">
                                 <label for="lastname" class="form-label text-dark">Last Name:</label>
                                 <input type="text" class="form-control  form-control-lg" name="lastname" required/>
                             </div>
 
-                            <div class="col-lg-3 mb-3">
+                            <div class="col-md-3 mb-3">
                                 <label for="phone" class="form-label text-dark">Phone Number:</label>
                                 <input type="text" class="form-control  form-control-lg" name="phone"  placeholder="+63"/>
                             </div>
@@ -91,6 +91,7 @@
        </div>
   </div>
 </div>
+
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>

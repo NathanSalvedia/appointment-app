@@ -1,4 +1,4 @@
-@extends('layouts.second-public')
+@extends('layouts.layout')
 
 @section('title', 'Appointment App | Login ')
 

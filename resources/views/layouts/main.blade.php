@@ -18,18 +18,20 @@
 
     <link  href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link  href="{{ asset('css/style.css') }}" rel="stylesheet">
-
     <link  href="{{ asset('css/queries.css') }}" rel="stylesheet">
     <link  href="{{ asset('css/general.css') }}" rel="stylesheet">
     <link  href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link  href="{{ asset('css/deafult.css') }}" rel="stylesheet">
 
 
+
+
+
 </head>
 <body>
 
     @yield('navbar')
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav class="navbar navbar-expand-md navbar-light bg-light ">
         <div class="container-fluid">
             <a class="navbar-brand pl-5">
                 <img class="logo" alt="SPC logo" src="img/logo.png"/>
@@ -43,9 +45,13 @@
             </div>
         </div>
     </nav>
-    @show
+   @show
 
       @yield('content')
+
+
+
+
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('js/script.js')}}"></script>

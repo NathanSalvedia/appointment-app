@@ -1,6 +1,7 @@
-@extends('layouts.second-public')
+@extends('layouts.layout')
 
 @section('title', 'Appointment App | Signup')
+
 
 <div class="auth-wrapper d-flex pt-5">
     <div class="col-md-5 m-auto ">
@@ -56,7 +57,7 @@
                 </form>
 
                 <div class="d-grid px-3 mt-5">
-                    <button type="submit" class="btn btn-dark btn-block" id="signupForm">Sign Up</button>
+                    <button type="button" class="btn btn-dark btn-block" id="signupForm">Sign Up</button>
                     <div class="cta-form text-center py-5 text-dark">
                         Already have an account?
                         <a href="{{ asset('login') }}" class=" text-dark text-decoration-none">Login</a>
@@ -66,4 +67,9 @@
         </div>
     </div>
 </div>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById('signupForm').addEventListener('click', function() {
+        swal("Success!", "You have been successfully registered!!", "success");
+    });
+</script>

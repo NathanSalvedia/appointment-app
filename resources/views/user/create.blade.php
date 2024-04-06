@@ -13,22 +13,22 @@
                         <div class="row my-5">
                             <div class="col-lg-3 mb-3">
                                 <label for="firstname" class="form-label text-dark">First Name:</label>
-                                <input type="text" class="form-control  form-control-lg" name="firstname" required/>
+                                <input type="text" class="form-control form-control-lg bg-white" name="firstname" id="firstName" value="Kent zorel" readonly />
                             </div>
 
                             <div class="col-lg-3 mb-3">
                                 <label for="middlename" class="form-label text-dark">Middle Name:</label>
-                                <input type="text" class="form-control  form-control-lg" name="middlename" required/>
+                                <input type="text" class="form-control form-control-lg bg-white" name="middlename" id="middlename" value="B" readonly/>
                             </div>
 
                             <div class="col-lg-3 mb-3">
                                 <label for="lastname" class="form-label text-dark">Last Name:</label>
-                                <input type="text" class="form-control  form-control-lg" name="lastname" required/>
+                                <input type="text" class="form-control form-control-lg bg-white" name="lastname" id="lastname" value="Elnas" readonly/>
                             </div>
 
                             <div class="col-lg-3 mb-3">
                                 <label for="phone" class="form-label text-dark">Phone Number:</label>
-                                <input type="text" class="form-control  form-control-lg" name="phone"  placeholder="+63"/>
+                                <input type="tel" class="form-control form-control-lg bg-white" name="phone"  id="phone" value="09979800852" readonly/>
                             </div>
                             </div>
 

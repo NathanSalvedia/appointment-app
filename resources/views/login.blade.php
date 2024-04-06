@@ -20,7 +20,7 @@
                  </div>
                  <div class="mb-5">
                     <label for="password" class="form-text form-label"></label>
-                    <input type="password"  class="form-control form-control-lg" placeholder="Password" id="password" name="password" />
+                    <input type="password"  class="form-control form-control-lg" placeholder="Password:" id="password" name="password" />
                  </div>
                  <div class="form-text mb-5 d-flex justify-content-between">
                     <a class=" text-dark form-text text-decoration-none" href='{{ route('user.forgot')}}'> Forgot Password?</a>

@@ -73,7 +73,7 @@
                    </form>
 
                    <div class="mt-4 mb-3 float-right">
-                    <a class="btn btn-lg btn--cta text-white text-decoration-none" href='{{ route('user.settings')}}' role="button">Canel</a>
+                    <a class="btn btn-lg btn--cta text-white text-decoration-none" href='{{ route('user.settings')}}' role="button">Cancel</a>
                     <button type="button" class="btn btn-lg btn--cta text-white text-decoration-none">Save</button>
                      <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
                    </div>
