@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MainpageController;
+use App\Http\Controllers\RequestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,46 +21,25 @@ Route::get('/', function () {
 
 Route::get('/login', function () {
     return view('login');
-});
+})->name('login');
 
-Route::get('/mainpage', function () {
-    return view('mainpage');
-});
+Route::get('/mainpage', [MainpageController::class, 'index'])->name('mainpage');
+
+Route::get('/user/request', [RequestController::class, 'index'])->name('user.request');
+Route::post('/user/request', [RequestController::class,'store'])->name('user.request');
 
 
 Route::get('/signup', function () {
     return view('signup');
 });
 
-Route::get('/admin', function () {
-    return view('admin-login');
-});
-
-
 Route::get('/user/settings', function (){
        return view('user.settings');
 })->name('user.settings');
 
-
-Route::get('/user/username', function (){
-    return view('user.username');
-})->name('user.username');
-
-
-Route::get('/user/password', function (){
-    return view('user.password');
-})->name('user.password');
-
-
-Route::get('/user/email', function (){
-    return view('user.email');
-})->name('user.email');
-
-
-Route::get('/user/contact', function (){
-    return view('user.contact');
-})->name('user.contact');
-
+Route::get('/user/edit-profile', function (){
+    return view('user.edit-profile');
+})->name('user.edit-profile');
 
 Route::get('/user/request', function (){
     return view('user.request');
@@ -78,3 +59,51 @@ Route::get('/user/logout', function (){
 Route::get('/user/forgot', function (){
     return view('user.forgot');
 })->name('user.forgot');
+
+
+Route::get('/user/view', function (){
+    return view('user.view');
+})->name('user.view');
+
+
+Route::get('/user/create', function () {
+    return view('user.create');
+})->name('user.create');
+
+
+Route::get('/user/profile', function () {
+    return view('user.profile');
+})->name('user.profile');
+
+Route::get('/user/view', function () {
+    return view('user.view');
+})->name('user.view');
+
+Route::get('/user/verify-email', function () {
+    return view('user.verify-email');
+})->name('user.verify-email');
+
+Route::get('/admin/admin-login', function () {
+    return view('admin.admin-login');
+})->name('admin.admin-login');
+
+
+Route::get('/admin/admin-mainpage', function () {
+    return view('admin.admin-mainpage');
+})->name('admin.admin-mainpage');
+
+
+Route::get('/admin/admin-form', function () {
+    return view('admin.admin-form');
+})->name('admin.admin-form');
+
+
+Route::get('/admin/admin-logout', function () {
+    return view('admin.admin-logout');
+})->name('admin.admin-logout');
+
+Route::get('/admin/admin-request', function () {
+    return view('admin.admin-request');
+})->name('admin.admin-request');
+
+

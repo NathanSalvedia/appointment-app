@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="School Registrar Appointment System" >
 
+    <link rel="icon" href="{{ asset('img/logo1.png')}}" />
+    <link rel="manifest" href="{{ asset('manifest.webmanifest')}}" />
 
     <title>@yield('title', 'Appointment App')</title>
 
@@ -15,23 +17,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/deafult.css') }}" rel="stylesheet">
 
 
 
 
 </head>
-    <style>
-        body{
-        background-color: #76292A;
-    }
-
-    </style>
-
-  </style>
 <body>
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 body{
-    font-family: "Open Sans", 'san-serif';
+
     background-color: #76292A;
-  
+
 }
 
 .auth-wrapper {
@@ -14,29 +14,36 @@ body{
 .wrapper{
     background-color: #800020;
 }
+
 */
 .form-text{
-    font-size: 30px ;
+    font-size: 1.8rem ;
 }
 
+
 .btn{
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 .form-login input{
-    font-size: 30px;
+  font-size: 2rem;
 
 }
+
+form  input, label{
+    font-size: 1.5rem;
+}
+
+
+
 
 .cta-form{
-    font-size: 30px;
+    font-size: 1.9rem;
 }
 
-.form-signup{
-    font-size: 25px;
-}
+
 
 .form-signup input{
-    font-size: 30px;
+    font-size: 1.9rem;
 
 }

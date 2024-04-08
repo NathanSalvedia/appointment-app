@@ -1,12 +1,13 @@
-@extends('layouts.default')
+@extends('layouts.public')
 
-@section('title', 'Appointment App | Settings | Status')
+
+@section('title', 'Appointment App | Change Profile')
 
 <div class="container-fluid">
     <div class="row">
         <div class=".col">
             <div class="card-sidebar">
-                <div class="mb-5 pt-5 pl-3"><a href="#">
+                <div class=" mb-5 pt-5 pl-3"><a href="#">
                     <img  src="{{ asset('img/icon.png')}}" alt="icon"/>
                    </a></div>
                   <div class="mb-5 pl-3 text-white">
@@ -23,36 +24,24 @@
             </div>
           </div>
 
-          <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mt-4 pt-5 text-center ">
-                        <h1 class="display-3">Appointment</h1>
-                       </div>
-                       <table class="table table-striped table-hover mt-5 ">
-                        <thead>
-                            <tr>
-                                <th scope="col">Appointment</></th>
-                                <th scope="col" class="text-right">Status</></th>
-                                <th scope="col" class="text-right">Action</></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                           <td>
-                            COR
-                           </td>
-                           <td class="text-right ml-5">
-                           Pending
-                           </td>
-                            <td class="text-right">
-                                <a href='{{ route('user.view')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-                          </tr>
-                        </tbody>
-                       </table>
-                </div>
+         <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 text-center">
+                    <div class="mt-5 pt-5 pl-5">
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-new img-thumbnail" style="width: 250px; height: 250px;">
+                              <img class="img-btn" src="https://via.placeholder.com/250x250" alt="...">
+                            </div>
+                            <div class="fileinput-preview fileinput-exists img-thumbnail"
+                              style="max-width: 250px; max-height: 250px;"></div>
+                          </div>
+                          <div class="mt-5 pl-5 ml-5">
+                            <button type="submit" class="btn  btn-lg btn--cta text-white text-decoration-none" value="submit">Select Image</button>
+                          </div>
+                    </div>
+                  </div>
             </div>
-          </div>
+        </div>
     </div>
 </div>
 
@@ -69,13 +58,5 @@
         });
     });
 </script>
-
-
-
-
-
-
-
-
 
 

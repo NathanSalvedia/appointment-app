@@ -6,16 +6,23 @@
     <meta name="description" content="School Registrar Appointment System" >
 
 
-    <title>@yield('title', 'Appointment App')</title>
+    <link rel="icon" href="{{ asset('img/logo1.png')}}" />
+    <link rel="manifest" href="{{ asset('manifest.webmanifest')}}" />
 
+    <title>@yield('title', 'Appointment App')</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link  href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link  href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link  href="{{ asset('css/queries.css') }}" rel="stylesheet">
+    <link  href="{{ asset('css/general.css') }}" rel="stylesheet">
+    <link  href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link  href="{{ asset('css/deafult.css') }}" rel="stylesheet">
+
 
 
 
@@ -23,25 +30,43 @@
 </head>
 <body>
 
-
-    <header class="header">
-        <a href="#">
-         <img class="logo" alt="" src="img/logo.png" />
-        </a>
-
-        <nav class="main-nav">
-         <ul class="main-nav-list">
-           <li><a class="main-nav-link nav-cta" href='{{ route('user.status')}}'>Appointment</a></li>
-           <li><a class="main-nav-link" href='{{ route('user.settings')}}'>Settings</a></li>
-           <li><a class="main-nav-link" href='{{ route('user.logout')}}'>Logout</a></li>
-         </ul>
-       </nav>
-      </header>
+    @yield('navbar')
+    <nav class="navbar navbar-expand-md navbar-light bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand pl-5">
+                <img class="logo" alt="SPC logo" src="img/logo.png"/>
+            </a>
+            <div class="collapse navbar-collapse" id="navbar-toggler">
+                <ul class="navbar-nav ml-auto main-nav-list">
+                    <li><a class="nav-item main-nav-link nav-cta" href='{{ route('user.status')}}'>Appointment</a></li>
+                    <li><a class="nav-item main-nav-link" href='{{ route('user.settings')}}'>Settings</a></li>
+                    <li><a class="nav-item main-nav-link" href="#" id="loginLink">Logout</a></li>
+                  </ul>
+            </div>
+        </div>
+    </nav>
+   @show
 
       @yield('content')
 
 
 
+
+
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/script.js')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("loginLink").addEventListener("click", function(event) {
+        event.preventDefault();
+        swal("Are you sure you want to Logout?", {
+            buttons: ["Cancel", true],
+        }).then((value) => {
+            if (value) {
+                window.location.href = "{{ route('login') }}";
+            }
+        });
+    });
+</script>
 </body>
 </html>

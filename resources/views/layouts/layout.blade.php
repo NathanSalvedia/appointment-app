@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="School Registrar Appointment System" >
 
+    <link rel="icon" href="{{ asset('img/logo1.png')}}" />
+    <link rel="manifest" href="{{ asset('manifest.webmanifest')}}" />
 
     <title>@yield('title', 'Appointment App')</title>
 
@@ -28,5 +30,6 @@
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+
 </body>
 </html>
