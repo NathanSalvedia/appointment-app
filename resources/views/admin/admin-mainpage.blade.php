@@ -5,26 +5,27 @@
 <div class="container-fluid">
     <div class="row">
         <div class=".col">
-            <div class="card">
-                <div class="mb-5 pt-5  text-center"><a href="#">
-                  <img class="icon" alt="" src="{{ asset('img/logo7.png') }}" />
-                 </a></div>
-                <div class="mb-5 text-center">
-                  <h4 class="heading"> Hi Admin</h4>
+            <div class="card-sidebar">
+                <div class="mb-5 pt-5 pl-3"><a href="#">
+                    <img  src="{{ asset('img/logo7.png')}}" alt="SPC logo"/>
+                   </a>
                 </div>
-               <div class="nav">
-                <ul class="list-unstyled pl-5">
-                  <li class="pt-5 mb-2 pl-5 p-5 text-center"><a class="text-white" href='{{ route('admin.admin-mainpage')}}'>Home</a></li>
-                  <li class="pt-5 mb-2 pl-5 p-5  text-center"><a class="text-white" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
-                </ul>
-               </div>
+                  <div class="mb-5 pl-3 text-white">
+                     <p class="cta-text">Hi Admin</p>
+                  </div>
+                 <div class="nav">
+                  <ul class="list-unstyled">
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin.admin-mainpage')}}">Dashboard</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
+                  </ul>
+                 </div>
             </div>
           </div>
 
           <div class="container">
-            <div class="">
-                <h1 class="display-4 text-center mt-5 mb-5">Welcome to Dashboard</h1>
-            </div>
+             <div class="mt-5 text-center mb-5">
+                <h1 class="display-4">Welcome to Dashboard</h1>
+             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
@@ -40,32 +41,39 @@
                             </div>
                           </div>
                     </div>
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                              <th scope="col"><h3>ID</h3></th>
-                              <th scope="col"><h3>Username</h3></th>
-                              <th scope="col"><h3>Email</h3></th>
-                              <th scope="col"><h3>Status</h3></th>
-                              <th scope="col"><h3>Actions</h3></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                                <th scope="row"><h3>1</h3></th>
-                                <td><h3>Fluffy</h3></td>
-                                <td><h3>kentozorel@gmail.com</h3></td>
-                                <td><h3>Pending</h3></td>
-                                <td>
-                                    <a href='{{ route('admin.admin-request')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-                                    <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" id="deleteButton"><i class="fa fa-times"></i></a>
-                                  </td>
-                            </tr>
-                          </tbody>
-                    </table>
-                </div>
+                    <div class="table-resonsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                  <th scope="col">ID</th>
+                                  <th scope="col">First Name</th>
+                                  <th scope="col">Middle Name</th>
+                                  <th scope="col">Last Name</th>
+                                  <th scope="col">Username  </th>
+                                  <th scope="col">Email</th>
+                                  <th scope="col">Status</th>
+                                  <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Kent zorel</td>
+                                    <td>B.</td>
+                                    <td>Elnas</td>
+                                    <td>kentzorel</td>
+                                    <td>kentzorel2021@gmail.com</td>
+                                    <td>Pending</td>
+                                    <td>
+                                        <a href='{{ route('admin.admin-request')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
+                                      </td>
+                                </tr>
+                            </tbody>
+                     </table>
+                    </div>
             </div>
-          </div>
+        </div>
     </div>
 </div>
 
@@ -86,6 +94,18 @@
                 });
             } else {
                 swal("This will remain the same!");
+            }
+        });
+    });
+
+
+    document.getElementById("loginLink").addEventListener("click", function(event) {
+        event.preventDefault();
+        swal("Are you sure you want to Logout?", {
+            buttons: ["Cancel", true],
+        }).then((value) => {
+            if (value) {
+                window.location.href = "{{ route('admin.admin-login') }}";
             }
         });
     });

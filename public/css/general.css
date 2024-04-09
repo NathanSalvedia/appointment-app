@@ -2,42 +2,48 @@
 
 body
 {
-  font-family: "Open Sans", 'sans-serif';
   background-color: #e9ecef;
+  font-family: 'Roboto', sans-serif;
 }
 
+.btn--cta{
+    background-color:  #76292A;
+    color: #fff;
+    font-size: 1.8rem;
+    border-radius: 0.5625rem;
+  }
 
-
-
-.btn{
-  background-color:  #BD6E6E;
-  color: #fff;
-  font-size: 28px;
-  font-weight: 500;
-
-}
-
-.form-password{
-  font-size: 19px;
-  font-weight: 500;
-  border-radius: 1.563rem;
-  margin-left: 164px;
+.form--cta{
+  font-size: 1.4rem;
+  margin-left: 100px;
 
 }
 
-.card{
+.card-sidebar{
   background-color: #76292A;
-  height: 100vh;
-  width: 320px;
+  min-height: 110vh;
+  width: 300px;
 }
+
+ .sidebar{
+    background-color: #76292A;
+    min-height: 110vh;
+
+ }
+
 
 .heading{
   color: #fff;
 
 }
 
+
+.cta-text{
+    font-size: 2rem;
+}
+
 .nav{
-  font-size: 1.375rem;
+  font-size: 1.8rem;
 
 }
 
@@ -52,9 +58,6 @@ body
 }
 
 
-.form-password label{
-  font-size: 22px;
-}
 
 
 .admin-form label,
@@ -68,32 +71,35 @@ body
  outline: none  ;
 }
 
-.cta-form{
-  font-size: 1.25rem;
-  font-weight: 500;
+.cta-form label,
+.cta-form input{
+
+    font-size: 1.6rem
 }
 
-.cta-form input,
-.cta-form select {
+.cta--form option,
+.cta--form select {
   width: 100%;
   padding: 1.2rem;
   border: none;
-  font-size: 26px;
-  background-color: #BD6E6E;
-  color: #fff;
+  font-size: 1.8rem;
+  background-color: #e9ecef;
+  color: black;
   border-radius: 9px;
   outline: none;
 }
 
+
+
+
 .form-group label,
 .form-group input{
-  font-size: 25px;
+  font-size: 1.7rem;
 
 }
 
-.form-floating{
-  font-size:  1.25rem;
-  font-weight: 500;
+.form-floating, textarea{
+  font-size:  1.8rem;
 }
 
 .cta-table{
@@ -102,4 +108,17 @@ body
 
 .table{
     font-size: 28px;
+}
+
+
+.fileinput{
+    margin-left: 300px;
+}
+
+.bg-img{
+    background-color: #BD6E6E;
+}
+
+.form-control-plaintext{
+    font-size: 1.8rem;
 }

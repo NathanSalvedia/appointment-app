@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="School Registrar Appointment System" >
 
+    <link rel="icon" href="{{ asset('img/logo1.png')}}" />
+    <link rel="manifest" href="{{ asset('manifest.webmanifest')}}" />
 
     <title>@yield('title', 'Appointment App')</title>
 
@@ -27,11 +29,12 @@
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/script.js')}}"></script>
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
     function showSweetAlert() {
-        swal("Success", "Your request has been successfully sent!", "success").then((value) => {
+        swal("Good job!", "Your request has been successfully sent!", "success").then((value) => {
             if (value) {
                 window.location.href = "{{ route('user.status') }}"; // Redirect to status page
             }
@@ -40,13 +43,13 @@
 
     document.getElementById('saveButton').addEventListener('click', function(event) {
         event.preventDefault();
-        swal("Success!", "Your request has been Successfully Changed!!", "success")
+        swal("Success!", "Your request has been saved!", "success")
         .then((value) => {
             window.location.href = "{{ route('user.status') }}"; // Redirect to status page
         });
     });
+
+
 </script>
-
-
 </body>
 </html>

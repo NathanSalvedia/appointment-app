@@ -9,12 +9,14 @@
         <div class="text-center">
           <h1 class="display-2 p-5 m-5 text-white">"By Scheduling an Appointment you're taking"</h1>
          </div>
-         <p class="h1 text-center my-5 pt-5 text-white">
+         <p class="main-text text-center my-5 pt-5 text-white">
           A steps towards making your dreams a Reality
          </p>
         <div class="main-btn text-center">
-          <a class="btn btn--form" href='{{ route('user.request')}}' role="button">Request now!!</a>
-          <!--<button href="#appointment.html" class="btn btn--form">Request now!!</button>-->
+
+        <a class="btn cta--btnn" href='{{ route('user.request')}}' role="button">Request now!</a>
+
+        <!--<button href='{{ route('user.request')}}' class="btn btn--form">Request now!!</button>-->
         </div>
       </div>
       <footer class="footer">
@@ -25,15 +27,14 @@
                 <a href="#">
                   <img class="icons" alt="" src="img/icon2.png" />
                  </a>
-                <a class="footer-link p-4" href="tel:+63 1234 567 89">+63 1234 567 89</a
+                <a class="footer-link p-4" href="tel:+63 1234 567 89">+063  221 6246</a
                   ><br />
 
                   <a href="#">
                     <img class="icons" alt="" src="img/icon1.png" />
                    </a>
                   <a class="footer-link" href="mailto:spc.edu.ph@gmail.com"
-                  >spc.edu.ph@gmail.com</a
-
+                  >spc.edu.ph@gmail.com</a>
               </p>
             </address>
           </ul>
