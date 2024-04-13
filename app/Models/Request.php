@@ -9,5 +9,5 @@ class Request extends Model
 {
     use HasFactory;
 
-    protected $table = "requests";
+
 }

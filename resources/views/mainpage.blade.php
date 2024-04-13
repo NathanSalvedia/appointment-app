@@ -13,7 +13,7 @@
          </p>
 
         <div class="main-btn text-center">
-        <a class="btn btn-cta btn-lg" href='{{ route('user.request')}}'  role="button">Request now!</a>
+        <a class="btn btn-cta btn-lg" href=""  role="button">Request now!</a>
         </div>
       </div>
       <footer class="footer">

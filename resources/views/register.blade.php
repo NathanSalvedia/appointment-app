@@ -29,7 +29,7 @@
 
                         <div class="col-md-6 mb-3">
                             <label for="phone" class="form-label text-dark">Phone Number:</label>
-                            <input type="text" class="form-control  form-control-lg" name="phone"  placeholder="+63"/>
+                            <input type="tel" class="form-control  form-control-lg" name="phonenumber"  placeholder="+63"/>
                         </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                 </form>
 
                 <div class="d-grid px-3 mt-5">
-                    <button type="button" class="btn btn-dark btn-block" id="signupForm">Sign Up</button>
+                    <button type="submit" class="btn btn-dark btn-block">Register</button>
                     <div class="cta-form text-center py-5 text-dark">
                         Already have an account?
                         <a href="{{ asset('login') }}" class=" text-dark text-decoration-none">Login</a>
@@ -67,9 +67,3 @@
         </div>
     </div>
 </div>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-    document.getElementById('signupForm').addEventListener('click', function() {
-        swal("Success!", "You have been successfully registered!!", "success");
-    });
-</script>

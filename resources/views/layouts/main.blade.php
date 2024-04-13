@@ -38,9 +38,9 @@
             </a>
             <div class="collapse navbar-collapse" id="navbar-toggler">
                 <ul class="navbar-nav ml-auto main-nav-list">
-                    <li><a class="nav-item main-nav-link nav-cta" href='{{ route('user.status')}}'>Appointment</a></li>
-                    <li><a class="nav-item main-nav-link" href='{{ route('user.settings')}}'>Settings</a></li>
-                    <li><a class="nav-item main-nav-link" href="#" id="loginLink">Logout</a></li>
+                    <li><a class="nav-item main-nav-link nav-cta" href="">Appointment</a></li>
+                    <li><a class="nav-item main-nav-link" href="">Settings</a></li>
+                    <li><a class="nav-item main-nav-link" href="#">Logout</a></li>
                   </ul>
             </div>
         </div>
@@ -54,7 +54,7 @@
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('js/script.js')}}"></script>
+    <script src="{{ asset('js/script.js')}}"></script
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
     document.getElementById("loginLink").addEventListener("click", function(event) {
