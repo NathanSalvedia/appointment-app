@@ -1,9 +1,15 @@
 <?php
 
+
+use App\Http\Controllers\MainpageController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +31,15 @@ use App\Http\Controllers\Auth\RegisterController;
 //});
 
 
+Route::get('/mainpage', [MainpageController::class, 'index'])->name('mainpage');;
+
 Route::get('/login', [LoginController::class, 'show'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 
+Route::resource('register', RegisterController::class);
 
-Route::get('/mainpage', function () {
-    return view('mainpage');
-});
+
+Route::get('/register', function () {
+    return view('register');
+})->name('register');

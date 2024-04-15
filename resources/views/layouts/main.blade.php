@@ -40,7 +40,7 @@
                 <ul class="navbar-nav ml-auto main-nav-list">
                     <li><a class="nav-item main-nav-link nav-cta" href="">Appointment</a></li>
                     <li><a class="nav-item main-nav-link" href="">Settings</a></li>
-                    <li><a class="nav-item main-nav-link" href="#">Logout</a></li>
+                    <li><a class="nav-item main-nav-link" href="">Logout</a></li>
                   </ul>
             </div>
         </div>
@@ -54,19 +54,7 @@
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('js/script.js')}}"></script
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-    document.getElementById("loginLink").addEventListener("click", function(event) {
-        event.preventDefault();
-        swal("Are you sure you want to Logout?", {
-            buttons: ["Cancel", true],
-        }).then((value) => {
-            if (value) {
-                window.location.href = "{{ route('login') }}";
-            }
-        });
-    });
-</script>
+
+
 </body>
 </html>
