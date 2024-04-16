@@ -16,7 +16,7 @@
              <div class="nav">
               <ul class="list-unstyled">
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin.admin-mainpage')}}">Dashboard</a></li>
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('admin.admin-logout')}}'>Logout</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Logout</a></li>
               </ul>
              </div>
         </div>

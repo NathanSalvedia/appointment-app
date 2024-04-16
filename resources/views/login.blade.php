@@ -13,28 +13,29 @@
             <div class=" px-3 pt-3 mx-4 m-3 p-5">
                 <h1 class="display-3 text-center  font-weight-bold text-dark">Login</h1>
                 <!--<p class="h1 text-center p-5 font-weight-bold  text-black">Login</p>-->
-                <form class="form-login">
+             <form class="form-login" method="POST" action="{{ route('login')}}">
+                    @csrf
                  <div class="mb-5 mt-4">
                     <label for="email" class="form-text form-label"></label>
-                    <input type="text" placeholder="Email:" class="form-control  form-control-lg" id="email" name="email" />
+                    <input type="email" placeholder="Email:" class="form-control  form-control-lg" name="email" />
                  </div>
                  <div class="mb-5">
                     <label for="password" class="form-text form-label"></label>
-                    <input type="password"  class="form-control form-control-lg" placeholder="Password:" id="password" name="password" />
+                    <input type="password"  class="form-control form-control-lg" placeholder="Password:"  name="password"/>
                  </div>
                  <div class="form-text mb-5 d-flex justify-content-between">
-                    <a class=" text-dark form-text text-decoration-none" href='{{ route('user.forgot')}}'> Forgot Password?</a>
+                    <a class=" text-dark form-text text-decoration-none" href=""> Forgot Password?</a>
                  </div>
                  <div class="mt-2 mb-2 d-grid ">
-                    <a class="btn btn-dark btn-block  btn-lg  " href="{{ asset('mainpage') }}" role="button">Login</a>
-                    <!--<button-- type="submit" class="btn btn-block btn-light">Login</button-->
+                    <!--<a class="btn btn-dark btn-block  btn-lg  " href="" role="button">Login</a>-->
+                    <button type="submit" class="btn btn-dark btn-block  btn-lg">Login</button>
                  </div>
                  <div class="cta-form text-center py-4 ">
                     Don't have account?
-                    <a href="{{ asset('signup') }}"
-                    class="text-dark text-decoration-none">Sign Up</a>
+                    <a href="{{ asset('register') }}"
+                    class="text-dark text-decoration-none">Register</a>
                 </div>
-                </form>
+             </form>
             </div>
         </div>
     </div>

@@ -18,8 +18,8 @@
              <div class="nav">
               <ul class="list-unstyled">
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.status')}}'>Appointment</a></li>
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.settings')}}'>Settings</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Appointment</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Settings</a></li>
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
               </ul>
              </div>
