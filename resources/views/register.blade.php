@@ -16,46 +16,80 @@
                           </div>
                         <div class="col-md-6 mb-3">
                             <label for="firstname" class="form-label text-dark">First Name:</label>
-                            <input type="text" class="form-control  form-control-lg" name="firstname" />
+                            <input type="text" class="form-control  form-control-lg @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" />
+
+                            @error('firstname')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label for="middlename" class="form-label text-dark">Middle Name:</label>
-                            <input type="text" class="form-control  form-control-lg" name="middlename" />
+                            <input type="text" class="form-control  form-control-lg @error('middlename') is-invalid @enderror" name="middlename" value="{{ old('middlename') }}" />
+
+
+                            @error('middlename')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label for="lastname" class="form-label text-dark">Last Name:</label>
-                            <input type="text" class="form-control  form-control-lg" name="lastname" />
+                            <input type="text" class="form-control  form-control-lg @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" />
+
+
+                            @error('lastname')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label for="phonenumber" class="form-label text-dark">Phone Number:</label>
-                            <input type="text" class="form-control  form-control-lg" name="phonenumber"  placeholder="+63"/>
+                            <input type="text" class="form-control  form-control-lg @error('phonenumber') is-invalid @enderror" name="phonenumber"  value="{{ old('phonenumber')}}" placeholder="+63"  />
+
+
+                            @error('phonenumber')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
 
                     <div class="px-3 mb-3">
                         <label for="username" class="form-label text-dark">Username:</label>
-                        <input type="username" class="form-control  form-control-lg" name="username" />
+                        <input type="username" class="form-control  form-control-lg @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" />
+
+
+                        @error('username')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="px-3 mb-3">
                         <label for="email" class="form-label text-dark">Email:</label>
-                        <input type="email" class="form-control  form-control-lg" name="email" />
+                        <input type="email" class="form-control  form-control-lg @error('email') is-invalid @enderror" name="email"  value="{{ old('email') }}" />
+
+
+                        @error('email')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="px-3 mb-3">
                         <label for="password" class="form-label text-dark">Password:</label>
-                        <input type="password" class="form-control  form-control-lg" name="password" />
+                        <input type="password" class="form-control  form-control-lg @error('password') is-ivalid @enderror" name="password"  value="{{ old('password') }}" />
+
+
+                        @error('password')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="px-3 mb-3">
                         <label for="password" class="form-label text-dark">Password Confirmation:</label>
                         <input type="password" class="form-control  form-control-lg" name="password_confirmation" />
-                    </div>
 
+                    </div>
 
                    <div class="d-grid px-3 mt-5">
                     <button type="submit" class="btn btn-dark btn-lg btn-block">Register</button>

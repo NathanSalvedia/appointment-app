@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('request', function (Blueprint $table) {
             $table->id();
-            $table->string('request_form');
-            $table->string('first_name');
-            $table->string('middle_name');
-            $table->string('last_name');
-            $table->integer('phone_number');
-            $table->string('typesof_requirements');
+            $table->string('firstname');
+            $table->string('middlename');
+            $table->string('lastname');
+            $table->string('phonenumber');
+            $table->string('typesofrequirements');
             $table->string('files');
             $table->string('pupose');
             $table->timestamps();

@@ -17,15 +17,30 @@
                     @csrf
                  <div class="mb-5 mt-4">
                     <label for="email" class="form-text form-label"></label>
-                    <input type="email" placeholder="Email:" class="form-control  form-control-lg" name="email" />
+                    <input type="email" placeholder="Email:" class="form-control  form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"/>
+
+                    @error('email')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                  </div>
                  <div class="mb-5">
                     <label for="password" class="form-text form-label"></label>
-                    <input type="password"  class="form-control form-control-lg" placeholder="Password:"  name="password"/>
+                    <input type="password"  class="form-control form-control-lg @error('password') is-invalid @enderror" placeholder="Password:"  name="password" value="{{ old('password') }}"/>
+
+                    @error('password')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                  </div>
-                 <div class="form-text mb-5 d-flex justify-content-between">
+
+                 <div class="mb-5 d-flex justify-content-between align-items-center">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" name="remember" value="true" id="customCheck1">
+                        <label class="custom-control-label text-black-50" for="customCheck1">Remember me</label>
+                     </div>
+
                     <a class=" text-dark form-text text-decoration-none" href=""> Forgot Password?</a>
                  </div>
+
                  <div class="mt-2 mb-2 d-grid ">
                     <!--<a class="btn btn-dark btn-block  btn-lg  " href="" role="button">Login</a>-->
                     <button type="submit" class="btn btn-dark btn-block  btn-lg">Login</button>

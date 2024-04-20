@@ -10,14 +10,14 @@
                     <img  src="{{ asset('img/icon.png')}}" alt="icon"/>
                    </a></div>
                   <div class="mb-5 pl-3 text-white">
-                     <p class="cta-text">Kent Zorel Elnas</p>
+                     <p class="cta-text"> Hi! Kent Zorel </p>
                   </div>
                  <div class="nav">
                   <ul class="list-unstyled">
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.status')}}'>Appointment</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.settings')}}'>Settings</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Home</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Appointment</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Settings</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Logout</a></li>
                   </ul>
                  </div>
             </div>
@@ -38,6 +38,7 @@
                             </tr>
                         </thead>
                         <tbody>
+
                           <tr>
                            <td>
                             COR
@@ -46,8 +47,9 @@
                            Pending
                            </td>
                             <td class="text-right">
-                                <a href='{{ route('user.view')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
+                                <a href="" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
                           </tr>
+
                         </tbody>
                        </table>
                 </div>
