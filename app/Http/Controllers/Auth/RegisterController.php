@@ -39,13 +39,13 @@ class RegisterController extends Controller
         //validation
 
         $request->validate([
-            'firstname' => 'required',
-            'middlename' => 'required',
-            'lastname' => 'required',
+            'firstname' => 'required|string|max:50',
+            'middlename' => 'required|string|max:50',
+            'lastname' => 'required|string|max:50',
             'phonenumber' => 'required',
             'username' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed|min:8',
+            'password' => 'required|confirmed|min:8|max:12',
 
         ]);
 

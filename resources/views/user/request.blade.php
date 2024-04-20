@@ -13,14 +13,14 @@
                </a>
             </div>
               <div class="mb-5 pl-3 text-white">
-                 <p class="cta-text">Kent Zorel Elnas</p>
+                 <p class="cta-text"> Hi! Kent Zorel</p>
               </div>
              <div class="nav">
               <ul class="list-unstyled">
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Appointment</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('request.create')}}">Appointment</a></li>
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Settings</a></li>
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}">Logout</a></li>
               </ul>
              </div>
         </div>
@@ -34,32 +34,32 @@
                         <p class="cta-text font-weight-bold">Request Form</p>
                       </div>
 
-                      <form action="" class="cta-form">
+                      <form class="cta-form" method="POST" action="{{ route('request.store')}}">
                         @csrf
                         <div class="row my-5">
                             <div class="col-md-3 mb-3">
                                 <label for="firstname" class="form-label text-dark">First Name:</label>
-                                <input type="text" class="form-control  form-control-lg" name="firstname" required/>
+                                <input type="text" class="form-control  form-control-lg" name="firstname" />
                             </div>
 
                             <div class="col-md-3 mb-3">
                                 <label for="middlename" class="form-label text-dark">Middle Name:</label>
-                                <input type="text" class="form-control  form-control-lg" name="middlename" required/>
+                                <input type="text" class="form-control  form-control-lg" name="middlename" />
                             </div>
 
                             <div class="col-md-3 mb-3">
                                 <label for="lastname" class="form-label text-dark">Last Name:</label>
-                                <input type="text" class="form-control  form-control-lg" name="lastname" required/>
+                                <input type="text" class="form-control  form-control-lg" name="lastname" />
                             </div>
 
                             <div class="col-md-3 mb-3">
                                 <label for="phone" class="form-label text-dark">Phone Number:</label>
-                                <input type="text" class="form-control  form-control-lg" name="phone"  placeholder="+63"/>
+                                <input type="text" class="form-control  form-control-lg @error('phonenumber') is-invalid @enderror" name="phone"  value="{{ old('phonenumber')}}" placeholder="+63"/>
                             </div>
                             </div>
 
                             <div class="cta--form">
-                                <select id="select-option" name="select-option" required>
+                                <select id="select-option" name="select-option">
                                     <option value="">Please choose one option:</option>
                                     <option value="Transcript of Record">Transcript of Record</option>
                                     <option value="COR">COR</option>
@@ -80,31 +80,19 @@
                                 <label for="floatingTextarea2">Purpose:</label>
                                 <textarea class="form-control"  id="floatingTextarea2" style="height: 180px"></textarea>
                               </div>
+
+                              <div class="mt-5 text-right mx-5 mb-3">
+                                <button type="submit" class="btn--cta  btn-lg">Submit</button>
+                            </div>
                       </form>
                 </div>
             </div>
-            <div class="mt-5 text-right mx-5 mb-3">
-                <button type="button" class="btn--cta  btn-lg" onclick="showSweetAlert()">Submit</button>
-                <!--<button type="submit" class="btn  btn-lg">Submit</button>-->
-              </div>
+
         </div>
        </div>
   </div>
 </div>
 
 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-    document.getElementById("loginLink").addEventListener("click", function(event) {
-        event.preventDefault();
-        swal("Are you sure you want to Logout?", {
-            buttons: ["Cancel", true],
-        }).then((value) => {
-            if (value) {
-                window.location.href = "{{ route('login') }}";
-            }
-        });
-    });
-</script>
 
 
