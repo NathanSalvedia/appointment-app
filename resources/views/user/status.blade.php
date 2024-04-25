@@ -10,7 +10,9 @@
                     <img  src="{{ asset('img/icon.png')}}" alt="icon"/>
                    </a></div>
                   <div class="mb-5 pl-3 text-white">
-                     <p class="cta-text"> Hi! Kent Zorel </p>
+
+                     <p class="cta-text"> Hi {{ Auth::user()->firstname }}  ! </p>
+
                   </div>
                  <div class="nav">
                   <ul class="list-unstyled">
@@ -32,23 +34,23 @@
                        <table class="table table-striped table-hover mt-5 ">
                         <thead>
                             <tr>
-                                <th scope="col">Appointment</></th>
-                                <th scope="col" class="text-right">Status</></th>
-                                <th scope="col" class="text-right">Action</></th>
+                                <td scope="col">Appointment</td>
+                                <td scope="col" class="text-right">Status</td>
+                                <td scope="col" class ="text-right">Action</td>
                             </tr>
                         </thead>
                         <tbody>
 
-                          <tr>
-                           <td>
-                            COR
-                           </td>
-                           <td class="text-right ml-5">
-                           Pending
-                           </td>
-                            <td class="text-right">
-                                <a href="" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-                          </tr>
+                             @foreach ($appointments as $appointment )
+                            <tr>
+                             <td>{{ $appointment->typesofrequirements }}</td>
+                             <td>Pending</td>
+                             <td>Example</td>
+                             <tr>
+                             @endforeach
+
+
+
 
                         </tbody>
                        </table>
@@ -58,19 +60,8 @@
     </div>
 </div>
 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-    document.getElementById("loginLink").addEventListener("click", function(event) {
-        event.preventDefault();
-        swal("Are you sure you want to Logout?", {
-            buttons: ["Cancel", true],
-        }).then((value) => {
-            if (value) {
-                window.location.href = "{{ route('login') }}";
-            }
-        });
-    });
-</script>
+
+
 
 
 

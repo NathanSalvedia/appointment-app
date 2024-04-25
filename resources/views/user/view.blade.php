@@ -56,8 +56,8 @@
          </div>
 
          <div class="mb-5 pt-5  text-right mx-3">
-            <a class="btn btn--cta  btn-lg text-white text-decoration-none" href='{{ route('user.status')}}' role="button">Back</a>
-            <a class="btn btn--cta  btn-lg text-white text-decoration-none mx-3" href='{{ route('user.create')}}' role="button">Edit</a>
+            <a class="btn btn--cta  btn-lg text-white text-decoration-none" href="status" role="button">Back</a>
+            <a class="btn btn--cta  btn-lg text-white text-decoration-none mx-3" href="user.create" role="button">Edit</a>
              <!--<button type="submit" class="btn  btn-lg">Submit</button>-->
            </div>
        </div>

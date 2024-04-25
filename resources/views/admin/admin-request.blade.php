@@ -13,7 +13,7 @@
                   </div>
                  <div class="nav">
                   <ul class="list-unstyled">
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin.admin-mainpage')}}">Dashboard</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="admin.admin-mainpage">Dashboard</a></li>
                     <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Logout</a></li>
                   </ul>
                  </div>
@@ -88,7 +88,7 @@
                      </form>
 
                      <div class="mb-2 pt-4  text-right">
-                        <a class="btn bnt-lg btn--cta text-white text-decoration-none mx-3" href='{{ route('admin.admin-form')}}' role="button">Set Appointment</a>
+                        <a class="btn bnt-lg btn--cta text-white text-decoration-none mx-3" href="admin.admin-form" role="button">Set Appointment</a>
                         <button type="submit" class="btn bnt-lg btn--cta text-white text-decoration-none" id="submitButton">Submit</button>
                       </div>
                  </div>
@@ -104,7 +104,7 @@
 <script>
     document.getElementById("submitButton").addEventListener("click", function() {
         swal("Success!", "Your message has been Successfully Sent!").then(() => {
-            window.location.href = "{{ route('admin.admin-mainpage') }}";
+            window.location.href = "admin.admin-mainpage";
         });
     });
 </script>

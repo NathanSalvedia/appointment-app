@@ -13,8 +13,8 @@
               <div class="nav">
                <ul class="list-unstyled">
                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
-                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.status')}}'>Appointment</a></li>
-                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.settings')}}'>Settings</a></li>
+                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="status">Appointment</a></li>
+                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="user.settings">Settings</a></li>
                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
                </ul>
               </div>
@@ -73,7 +73,7 @@
                    </form>
 
                    <div class="mt-4 mb-3 float-right">
-                    <a class="btn btn-lg btn--cta text-white text-decoration-none" href='{{ route('user.settings')}}' role="button">Cancel</a>
+                    <a class="btn btn-lg btn--cta text-white text-decoration-none" href="user.settings" role="button">Cancel</a>
                     <button type="button" class="btn btn-lg btn--cta text-white text-decoration-none">Save</button>
                      <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
                    </div>

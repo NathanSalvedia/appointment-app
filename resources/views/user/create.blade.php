@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="mb-5 pt-5  text-right mx-3">
-                <a class="btn btn--cta btn-lg text-white text-decoration-none" href='{{ route('user.status')}}' role="button">Back</a>
+                <a class="btn btn--cta btn-lg text-white text-decoration-none" href="status" role="button">Back</a>
                 <button type="button" class="btn btn--cta btn-lg mx-3 text-white text-decoration-none" id="saveButton">Save</button>
                </div>
 
