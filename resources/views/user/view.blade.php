@@ -13,54 +13,57 @@
                     <p class="cta-text font-weight-bold">Request Form</p>
                   </div>
 
-                  <form action="" class="cta-form">
+                  <form class="cta-form" method="GET">
                     @csrf
                     <div class="row my-5">
                         <div class="col-lg-3 mb-3">
                             <label for="firstName" class="form-label">First Name:</label>
-                            <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="Kent zorel" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="{{ Auth::user()->firstname }}" readonly>
                         </div>
 
                         <div class="col-lg-3 mb-3">
                             <label for="firstName" class="form-label">Middle Name:</label>
-                            <input type="text" class="form-control form-control-lg bg-white" id="middletName" value="B" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="middleName" value="{{ Auth::user()->middlename}}" readonly>
                         </div>
 
                         <div class="col-lg-3 mb-3">
                             <label for="lastname" class="form-label text-dark">Last Name:</label>
-                            <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="Elnas" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="{{ Auth::user()->lastname}}" readonly>
                         </div>
 
                         <div class="col-lg-3 mb-3">
                             <label for="phone" class="form-label text-dark">Phone Number:</label>
-                            <input type="tel" readonly class="form-control form-control-lg bg-white form-control-lg"  value="09979800852">
+                            <input type="text" readonly class="form-control form-control-lg bg-white form-control-lg"  value="{{ Auth::user()->phonenumber}}" id="phone" />
                         </div>
                         </div>
 
                         <div class="cta--form">
-                            <select id="select-option" name="select-option" required>
-                                <option value="COR">COR</option>
-                              </select>
+                            @foreach ( $appointments as $appointment  )
+                                <option>{{ $appointment->typesofrequirements }}</option>
+                            @endforeach
                         </div>
 
                         <div class="form-group mt-3 pt-4">
-                            <img src="{{ asset('img/receipt.jpg')}}" width="300px" height="200" />
+                            @foreach ( $appointments as $appointment  )
+                            {{ $appointment->image}}
+                            @endforeach
                          </div>
 
-                       <div class="form-floating mt-4">
+                       <div class="form-floating mt-5">
+                        @foreach ( $appointments as $appointment  )
                         <label for="floatingPlaintextInput">Purpose:</label>
-                        <input type="text" readonly class="form-control form-control-lg bg-white" id="floatingPlaintextInput"  placeholder="For Scholarship" value="For Scholarship">
+                        {{ $appointment->purpose }}
+                        @endforeach
                       </div>
+
+                      <div class="mb-5 pt-5  text-right mx-3">
+                        <a class="btn btn--cta  btn-lg text-white text-decoration-none" href="status" role="button">Back</a>
+                        <a class="btn btn--cta  btn-lg text-white text-decoration-none mx-3" href="user.create" role="button">Edit</a>
+                       </div>
+                   </div>
                   </form>
             </div>
          </div>
-
-         <div class="mb-5 pt-5  text-right mx-3">
-            <a class="btn btn--cta  btn-lg text-white text-decoration-none" href="status" role="button">Back</a>
-            <a class="btn btn--cta  btn-lg text-white text-decoration-none mx-3" href="user.create" role="button">Edit</a>
-             <!--<button type="submit" class="btn  btn-lg">Submit</button>-->
-           </div>
-       </div>
     </div>
 
 

@@ -11,15 +11,15 @@
                    </a></div>
                   <div class="mb-5 pl-3 text-white">
 
-                     <p class="cta-text"> Hi {{ Auth::user()->firstname }}  ! </p>
+                     <p class="cta-text"> Hi, {{ Auth::user()->firstname }}! </p>
 
                   </div>
                  <div class="nav">
                   <ul class="list-unstyled">
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Home</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Appointment</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Settings</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Logout</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="status">Appointment</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="user.settings">Settings</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}">Logout</a></li>
                   </ul>
                  </div>
             </div>
@@ -34,9 +34,9 @@
                        <table class="table table-striped table-hover mt-5 ">
                         <thead>
                             <tr>
-                                <td scope="col">Appointment</td>
-                                <td scope="col" class="text-right">Status</td>
-                                <td scope="col" class ="text-right">Action</td>
+                                <th scope="col">Appointment</th>
+                                <th scope="col" class="text-right">Status</th>
+                                <th scope="col" class ="text-right">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,8 +44,10 @@
                              @foreach ($appointments as $appointment )
                             <tr>
                              <td>{{ $appointment->typesofrequirements }}</td>
-                             <td>Pending</td>
-                             <td>Example</td>
+                             <td class="text-right ml-5">Pending</td>
+                             <td width="150" class="text-right">
+                                <a href="view" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
+                             </td>
                              <tr>
                              @endforeach
 

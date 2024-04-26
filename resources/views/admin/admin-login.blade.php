@@ -13,18 +13,19 @@
             <div class=" px-3 pt-3 mx-4 m-3 p-5">
                 <h1 class="display-3 text-center p-5 font-weight-bold text-dark">Login</h1>
                 <!--<p class="h1 text-center p-5 font-weight-bold  text-black">Login</p>-->
-                <form class="form-login">
+                <form class="form-login" method="POST" action="{{ route('admin-login')}}">
+                    @csrf
                  <div class="mb-5">
                     <label for="email" class="form-text form-label"></label>
-                    <input type="text" placeholder="Email:" class="form-control  form-control-lg" id="email" name="email" />
+                    <input type="email" placeholder="Email:" class="form-control  form-control-lg" id="email" name="email" />
                  </div>
                  <div class="mb-5">
                     <label for="password" class="form-text form-label"></label>
-                    <input type="password"  class="form-control form-control-lg" placeholder="Password" id="password" name="password" />
+                    <input type="password"  class="form-control form-control-lg" placeholder="Password:" id="password" name="password" />
                  </div>
                  <div class="mt-4 mb-4 d-grid ">
-                    <a class="btn btn-dark btn-block  btn-lg" href="admin.admin-mainpage" role="button">Login</a>
-                    <!--<button-- type="submit" class="btn btn-block btn-light">Login</button-->
+                    <!--<a class="btn btn-dark btn-block  btn-lg" href="admin.admin-mainpage" role="button">Login</a>-->
+                    <button type="submit" class="btn btn-block btn-dark bnt-lg">Login</button>
                  </div>
                 </div>
                 </form>

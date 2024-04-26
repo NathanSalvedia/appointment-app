@@ -9,18 +9,14 @@ class MainpageController extends Controller
 
    public function __construct(){
 
-     $this->middleware('auth');
+     $this->middleware(['auth']);
     }
-
-
-
 
     /**
      * Handle the incoming request.
      */
     public function __invoke(Request $request)
     {
-
         return view('mainpage');
     }
 }

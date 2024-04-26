@@ -16,7 +16,7 @@
                  <div class="nav">
                   <ul class="list-unstyled">
                     <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="admin.admin-mainpage">Dashboard</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}">Logout</a></li>
                   </ul>
                  </div>
             </div>
@@ -94,18 +94,6 @@
                 });
             } else {
                 swal("This will remain the same!");
-            }
-        });
-    });
-
-
-    document.getElementById("loginLink").addEventListener("click", function(event) {
-        event.preventDefault();
-        swal("Are you sure you want to Logout?", {
-            buttons: ["Cancel", true],
-        }).then((value) => {
-            if (value) {
-                window.location.href = "{{ route('admin.admin-login') }}";
             }
         });
     });

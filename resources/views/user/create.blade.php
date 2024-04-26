@@ -9,26 +9,27 @@
                     <div class="mt-4 mb-4">
                         <p class="cta-text font-weight-bold">Request Form</p>
                       </div>
-                      <form action="" class="cta-form">
+                      <form  class="cta-form">
+                        @csrf
                         <div class="row my-5">
                             <div class="col-lg-3 mb-3">
                                 <label for="firstname" class="form-label text-dark">First Name:</label>
-                                <input type="text" class="form-control form-control-lg bg-white" name="firstname" id="firstName" value="Kent zorel" readonly />
+                                <input type="text" class="form-control form-control-lg bg-white" name="firstname" id="firstName"  value="{{ Auth::user()->firstname }}" enable/>
                             </div>
 
                             <div class="col-lg-3 mb-3">
                                 <label for="middlename" class="form-label text-dark">Middle Name:</label>
-                                <input type="text" class="form-control form-control-lg bg-white" name="middlename" id="middlename" value="B" readonly/>
+                                <input type="text" class="form-control form-control-lg bg-white" name="middlename" id="middlename" value="{{ Auth::user()->middlename}}" enable/>
                             </div>
 
                             <div class="col-lg-3 mb-3">
                                 <label for="lastname" class="form-label text-dark">Last Name:</label>
-                                <input type="text" class="form-control form-control-lg bg-white" name="lastname" id="lastname" value="Elnas" readonly/>
+                                <input type="text" class="form-control form-control-lg bg-white" name="lastname" id="lastname" value="{{ Auth::user()->lastname}}" enable/>
                             </div>
 
                             <div class="col-lg-3 mb-3">
                                 <label for="phone" class="form-label text-dark">Phone Number:</label>
-                                <input type="tel" class="form-control form-control-lg bg-white" name="phone"  id="phone" value="09979800852" readonly/>
+                                <input type="text" class="form-control form-control-lg bg-white" name="phonenumber"  id="phonenumber" value="{{ Auth::user()->phonenumber}}" enable/>
                             </div>
                             </div>
 
