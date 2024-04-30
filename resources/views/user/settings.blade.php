@@ -10,7 +10,7 @@
               <img  src="{{ asset('img/icon.png')}}" alt="icon"/>
              </a></div>
             <div class="mb-5 pl-3 text-white">
-               <p class="cta-text">Kent Zorel Elnas</p>
+               <p class="cta-text">  Hi, {{  Auth::user()->firstname }}!</p>
             </div>
            <div class="nav">
             <ul class="list-unstyled">
@@ -41,33 +41,33 @@
                         <div class="row my-5">
                             <div class="col-md-4 mb-3">
                                 <label for="firstName" class="form-label">First Name:</label>
-                                <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="Kent zorel" readonly>
+                                <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="{{ Auth::user()->firstname }}" disabled>
                             </div>
 
                             <div class="col-md-4 mb-3">
                                 <label for="firstName" class="form-label">Middle Name:</label>
-                                <input type="text" class="form-control form-control-lg bg-white" id="middletName" value="B" readonly>
+                                <input type="text" class="form-control form-control-lg bg-white" id="middletName" value="{{ Auth::user()->middlename }}" disabled>
                             </div>
 
                             <div class="col-md-4 mb-3">
                                 <label for="lastname" class="form-label text-dark">Last Name:</label>
-                                <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="Elnas" readonly>
+                                <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="{{ Auth::user()->lastname }}" disabled >
                             </div>
                             </div>
 
                          <label for="username" class="form-label">User Name:</label>
                           <div class="input-group mb-5">
-                            <input type="text" class="form-control form-control-lg bg-white" id="userName" value="Kentzorel" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="userName" value="{{ Auth::user()->username}}" disabled >
                           </div>
 
                          <label for="email" class="form-text form-label"> Email:</label>
                          <div class="input-group mb-5">
-                            <input type="text" class="form-control form-control-lg bg-white" id="Email" value="kentzorel2021@gmail.com" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="Email" value="{{ Auth::user()->email }}" disabled>
                          </div>
 
                          <label for="Phone" class="form-text form-label ">Contact Number:</label>
                          <div class="input-group" >
-                            <input type="text" class="form-control form-control-lg bg-white" id="contactNumber" value="09979800852" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="contactNumber" value="{{ Auth::user()->phonenumber}}" disabled>
                          </div>
                        </form>
                       <div class="mt-5 text-right">

@@ -2,8 +2,8 @@
 
 @section('title', 'Appointment App | Login ')
 
-<div class="auth-wrapper d-flex pt-5 my-5">
-    <div class="col-md-4 m-auto p-4 mt-5">
+<div class="auth-wrapper d-flex pt-3 my-3">
+    <div class="col-md-4 m-auto p-4 mt-3">
         <div class="bg-white shadow p-3 mb-4 bg-body-tertiary  rounded">
             <div class="text-center pt-5" >
                 <a>
@@ -23,12 +23,25 @@
                     <label for="password" class="form-text form-label"></label>
                     <input type="password"  class="form-control form-control-lg" placeholder="Password:" id="password" name="password" />
                  </div>
+
+                 <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" name="remember" value="true" id="customCheck1">
+                        <label class="custom-control-label text-black-50" for="customCheck1">Remember me</label>
+                     </div>
+                 </div>
+
                  <div class="mt-4 mb-4 d-grid ">
                     <!--<a class="btn btn-dark btn-block  btn-lg" href="admin.admin-mainpage" role="button">Login</a>-->
                     <button type="submit" class="btn btn-block btn-dark bnt-lg">Login</button>
                  </div>
+
+                 <div class="cta-form text-left ">
+                    <a href=""
+                    class="text-dark text-decoration-none">Register</a>
                 </div>
-                </form>
+                </div>
+              </form>
             </div>
         </div>
     </div>

@@ -2,21 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdminLoginController extends Controller
+class PasswordResetController extends Controller
 {
     public function show(){
 
-        return view('admin.admin-login');
+        return view('user.forgot');
     }
-
-    public function login(Request $request){
-
-
-     }
 
 
 }

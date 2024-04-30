@@ -22,6 +22,7 @@ class RequestFormController extends Controller
     'lastname' => 'required',
     'phonenumber' => 'required',
     'typesofrequirements' => 'required',
+    'image' => 'required',
     'purpose' => 'required',
     ]);
 
@@ -31,6 +32,7 @@ $requestform->middlename = $request->middlename;
 $requestform->lastname = $request->lastname;
 $requestform->phonenumber = $request->phonenumber;
 $requestform->typesofrequirements = $request->typesofrequirements;
+$requestform->image               = $request->image;
 $requestform->purpose = $request->purpose;
 
 

@@ -55,7 +55,7 @@
 
                             <div class="col-md-3 mb-3">
                                 <label for="phonenumber" class="form-label text-dark">Phone Number:</label>
-                                <input type="text" class="form-control  form-control-lg" name="phonenumber"  placeholder="+63" />
+                                <input type="text" class="form-control  form-control-lg" name="phonenumber"  placeholder="+63" value="{{ Auth::user()->phonenumber}}"  enabled/>
                             </div>
                             </div>
 
@@ -73,7 +73,7 @@
 
                             <div class="form-group mt-3 pt-4">
                                 <label for="image">Choose a file / Image:</label>
-                                <input type="file" class="form-control-file" id="image" name="image" />
+                                <input type="file" class="form-control-file" id="image" name="image" accept=".jpg, .jpeg, .png" />
                             </div>
                             <button type="submit" class="btn--cta btn-lg">Upload</button>
 

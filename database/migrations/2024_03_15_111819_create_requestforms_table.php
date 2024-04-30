@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('phonenumber');
             $table->string('typesofrequirements');
-            $table->string('image')->nullable();
+            $table->string('image')->default('test.jpg');
             $table->string('purpose');
             $table->timestamps();
         });

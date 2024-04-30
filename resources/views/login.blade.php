@@ -38,7 +38,7 @@
                         <label class="custom-control-label text-black-50" for="customCheck1">Remember me</label>
                      </div>
 
-                    <a class=" text-dark form-text text-decoration-none" href=""> Forgot Password?</a>
+                    <a class=" text-dark form-text text-decoration-none" href="{{ route('passwordreset')}}"> Forgot Password?</a>
                  </div>
 
                  <div class="mt-2 mb-2 d-grid ">

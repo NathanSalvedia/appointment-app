@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 
-
-class User
+class Admin
 {
     /**
      * Handle an incoming request.
@@ -19,13 +18,9 @@ class User
     {
 
 
-        if (!Auth::check()) {
-            return redirect('/login');
-        }
-
-
 
 
         return $next($request);
+
     }
 }
