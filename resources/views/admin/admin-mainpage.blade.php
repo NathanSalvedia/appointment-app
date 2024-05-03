@@ -15,8 +15,8 @@
                   </div>
                  <div class="nav">
                   <ul class="list-unstyled">
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="admin.admin-mainpage">Dashboard</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}">Logout</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Dashboard</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin-logout')}}">Logout</a></li>
                   </ul>
                  </div>
             </div>
@@ -56,6 +56,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Kent zorel</td>

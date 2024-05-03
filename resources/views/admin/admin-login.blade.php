@@ -35,10 +35,6 @@
                     <!--<a class="btn btn-dark btn-block  btn-lg" href="admin.admin-mainpage" role="button">Login</a>-->
                     <button type="submit" class="btn btn-block btn-dark bnt-lg">Login</button>
                  </div>
-
-                 <div class="cta-form text-left ">
-                    <a href=""
-                    class="text-dark text-decoration-none">Register</a>
                 </div>
                 </div>
               </form>
