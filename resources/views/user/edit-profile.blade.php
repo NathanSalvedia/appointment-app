@@ -8,13 +8,13 @@
                  <img  src="{{ asset('img/icon.png')}}" alt="icon"/>
                 </a></div>
                <div class="mb-5 pl-3 text-white">
-                  <p class="cta-text">Kent Zorel Elnas</p>
+                  <p class="cta-text"> Hi, {{  Auth::user()->firstname }}!</p>
                </div>
               <div class="nav">
                <ul class="list-unstyled">
                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
-                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.status')}}'>Appointment</a></li>
-                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.settings')}}'>Settings</a></li>
+                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="status">Appointment</a></li>
+                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="user.settings">Settings</a></li>
                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
                </ul>
               </div>
@@ -36,22 +36,22 @@
                     <div class="row">
                         <div class="col-md-6 mb-3 mt-2">
                             <label for="firstname" class="form-label text-dark">First Name:</label>
-                            <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="Kent zorel" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="{{ Auth::user()->firstname }}" enabled>
                         </div>
 
                         <div class="col-md-6 mb-3 mt-2">
                             <label for="middlename" class="form-label text-dark">Middle Name:</label>
-                            <input type="text" class="form-control form-control-lg bg-white" id="middletName" value="B" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="middletName" value="{{ Auth::user()->middlename }}" enabled>
                         </div>
 
                         <div class="col-md-6 mb-3 mt-2">
                             <label for="lastname" class="form-label text-dark">Last Name:</label>
-                            <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="Elnas" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="{{ Auth::user()->lastname }}" enabled>
                         </div>
 
                         <div class="col-md-6 mb-3 mt-2">
                             <label for="phone" class="form-label text-dark">Phone Number:</label>
-                            <input type="text" class="form-control  form-control-lg" name="phone"  placeholder="+63"/>
+                            <input type="text" class="form-control  form-control-lg" name="phonenumber"  placeholder="+63"  value="{{ Auth::user()->phonenumber }}" enabled/>
                         </div>
                     </div>
 
@@ -70,13 +70,13 @@
                         <input type="password" class="form-control  form-control-lg" name="password" />
                     </div>
 
-                   </form>
 
                    <div class="mt-4 mb-3 float-right">
-                    <a class="btn btn-lg btn--cta text-white text-decoration-none" href='{{ route('user.settings')}}' role="button">Cancel</a>
+                    <a class="btn btn-lg btn--cta text-white text-decoration-none" href="user.settings" role="button">Cancel</a>
                     <button type="button" class="btn btn-lg btn--cta text-white text-decoration-none">Save</button>
                      <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
                    </div>
+                </form>
             </div>
           </div>
          </div>

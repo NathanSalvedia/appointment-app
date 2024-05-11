@@ -15,7 +15,7 @@
               </div>
              <div class="nav">
               <ul class="list-unstyled">
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin.admin-mainpage')}}">Dashboard</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="admin.admin-mainpage">Dashboard</a></li>
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Logout</a></li>
               </ul>
              </div>
@@ -66,7 +66,7 @@
       icon: "success",
       button: "OK"
     }).then(function() {
-      window.location.href = "{{ route('admin.admin-mainpage') }}";
+      window.location.href = "admin.admin-mainpage";
     });
   });
 </script>

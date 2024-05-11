@@ -15,8 +15,8 @@
                   </div>
                  <div class="nav">
                   <ul class="list-unstyled">
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin.admin-mainpage')}}">Dashboard</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Dashboard</a></li>
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin-logout')}}">Logout</a></li>
                   </ul>
                  </div>
             </div>
@@ -56,6 +56,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Kent zorel</td>
@@ -65,7 +66,7 @@
                                     <td>kentzorel2021@gmail.com</td>
                                     <td>Pending</td>
                                     <td>
-                                        <a href='{{ route('admin.admin-request')}}' class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
+                                        <a href="admin.admin-request" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
                                         <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
                                       </td>
                                 </tr>
@@ -94,18 +95,6 @@
                 });
             } else {
                 swal("This will remain the same!");
-            }
-        });
-    });
-
-
-    document.getElementById("loginLink").addEventListener("click", function(event) {
-        event.preventDefault();
-        swal("Are you sure you want to Logout?", {
-            buttons: ["Cancel", true],
-        }).then((value) => {
-            if (value) {
-                window.location.href = "{{ route('admin.admin-login') }}";
             }
         });
     });

@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('request', function (Blueprint $table) {
+        Schema::create('requestforms', function (Blueprint $table) {
             $table->id();
             $table->string('firstname');
             $table->string('middlename');
             $table->string('lastname');
             $table->string('phonenumber');
             $table->string('typesofrequirements');
-            $table->string('files');
-            $table->string('pupose');
+            $table->string('image')->default('test.jpg');
+            $table->string('purpose');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('request');
+        Schema::dropIfExists('requestforms');
     }
 };

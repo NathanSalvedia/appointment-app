@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class RequestController extends Controller
+class SettingsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-
-        return view('user.request');
+        return view('user.settings');
     }
 
     /**
@@ -20,7 +21,7 @@ class RequestController extends Controller
      */
     public function create()
     {
-        return view('user.status');
+        return view('user.edit-profile');
     }
 
     /**
@@ -28,7 +29,7 @@ class RequestController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**

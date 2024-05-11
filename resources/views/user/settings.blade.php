@@ -10,13 +10,13 @@
               <img  src="{{ asset('img/icon.png')}}" alt="icon"/>
              </a></div>
             <div class="mb-5 pl-3 text-white">
-               <p class="cta-text">Kent Zorel Elnas</p>
+               <p class="cta-text">  Hi, {{  Auth::user()->firstname }}!</p>
             </div>
            <div class="nav">
             <ul class="list-unstyled">
               <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
-              <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.status')}}'>Appointment</a></li>
-              <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href='{{ route('user.settings')}}'>Settings</a></li>
+              <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="status">Appointment</a></li>
+              <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Settings</a></li>
               <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="" id="loginLink">Logout</a></li>
             </ul>
            </div>
@@ -33,7 +33,7 @@
                           <img class="icon" alt="" src="{{ asset('img/icon.png')}}" />
                      </div>
                       <div class="mt-5 text-right">
-                       <a class="btn bnt-lg btn--cta text-white text-decoration-none" href='{{ route('user.profile')}}' role="button">Change Profile</a>
+                       <a class="btn bnt-lg btn--cta text-white text-decoration-none" href="user.profile" role="button">Change Profile</a>
                         <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
                        </div>
 
@@ -41,37 +41,37 @@
                         <div class="row my-5">
                             <div class="col-md-4 mb-3">
                                 <label for="firstName" class="form-label">First Name:</label>
-                                <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="Kent zorel" readonly>
+                                <input type="text" class="form-control form-control-lg bg-white" id="firstName" value="{{ Auth::user()->firstname }}" disabled>
                             </div>
 
                             <div class="col-md-4 mb-3">
                                 <label for="firstName" class="form-label">Middle Name:</label>
-                                <input type="text" class="form-control form-control-lg bg-white" id="middletName" value="B" readonly>
+                                <input type="text" class="form-control form-control-lg bg-white" id="middletName" value="{{ Auth::user()->middlename }}" disabled>
                             </div>
 
                             <div class="col-md-4 mb-3">
                                 <label for="lastname" class="form-label text-dark">Last Name:</label>
-                                <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="Elnas" readonly>
+                                <input type="text" class="form-control form-control-lg bg-white" id="lastName" value="{{ Auth::user()->lastname }}" disabled >
                             </div>
                             </div>
 
                          <label for="username" class="form-label">User Name:</label>
                           <div class="input-group mb-5">
-                            <input type="text" class="form-control form-control-lg bg-white" id="userName" value="Kentzorel" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="userName" value="{{ Auth::user()->username}}" disabled >
                           </div>
 
                          <label for="email" class="form-text form-label"> Email:</label>
                          <div class="input-group mb-5">
-                            <input type="text" class="form-control form-control-lg bg-white" id="Email" value="kentzorel2021@gmail.com" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="Email" value="{{ Auth::user()->email }}" disabled>
                          </div>
 
                          <label for="Phone" class="form-text form-label ">Contact Number:</label>
                          <div class="input-group" >
-                            <input type="text" class="form-control form-control-lg bg-white" id="contactNumber" value="09979800852" readonly>
+                            <input type="text" class="form-control form-control-lg bg-white" id="contactNumber" value="{{ Auth::user()->phonenumber}}" disabled>
                          </div>
                        </form>
                       <div class="mt-5 text-right">
-                        <a class="btn bnt-lg btn--cta text-white text-decoration-none" href='{{ route('user.edit-profile')}}' role="button">Edit Profile</a>
+                        <a class="btn bnt-lg btn--cta text-white text-decoration-none" href="{{ route('settings.create')}}" role="button">Edit Profile</a>
                          <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
                         </div>
             </div>
