@@ -50,26 +50,32 @@
                                   <th scope="col">Middle Name</th>
                                   <th scope="col">Last Name</th>
                                   <th scope="col">Username  </th>
-                                  <th scope="col">Email</th>
+
                                   <th scope="col">Status</th>
                                   <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
 
+                           @foreach ($users as $user )
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Kent zorel</td>
-                                    <td>B.</td>
-                                    <td>Elnas</td>
-                                    <td>kentzorel</td>
-                                    <td>kentzorel2021@gmail.com</td>
-                                    <td>Pending</td>
-                                    <td>
-                                        <a href="admin.admin-request" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
-                                      </td>
-                                </tr>
+<td> {{ $user->id }} </td>
+<td> {{ $user->firstname }} </td>
+<td> {{ $user->middlename }} </td>
+<td> {{ $user->lastname }} </td>
+<td> {{ $user->phonenumber }} </td>
+<td> {{ $user->username }} </td>
+<td> {{ $user->typesofrequirements }} </td>
+<td>
+    <a href="admin.admin-request" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
+    <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
+</td>
+
+                                    <tr>
+
+
+
+                           @endforeach
                             </tbody>
                      </table>
                     </div>

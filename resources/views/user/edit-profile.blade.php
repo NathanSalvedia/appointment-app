@@ -32,7 +32,7 @@
             </div>
 
             <div class="col-md-12">
-                <form class="form--cta cta-form pl-3">
+                <form class="form--cta cta-form pl-3" method="POST" action="{{ route('profile-update')}}">
                     <div class="row">
                         <div class="col-md-6 mb-3 mt-2">
                             <label for="firstname" class="form-label text-dark">First Name:</label>
@@ -70,10 +70,14 @@
                         <input type="password" class="form-control  form-control-lg" name="password" />
                     </div>
 
+                    <div class="mb-4 mt-2">
+                        <label for="password" class="form-label text-dark">Password Confirmation:</label>
+                        <input type="password" class="form-control  form-control-lg" name="password_confirmation" />
+                    </div>
 
                    <div class="mt-4 mb-3 float-right">
-                    <a class="btn btn-lg btn--cta text-white text-decoration-none" href="user.settings" role="button">Cancel</a>
-                    <button type="button" class="btn btn-lg btn--cta text-white text-decoration-none">Save</button>
+                    <a class="btn btn-lg btn--cta text-white text-decoration-none" href="{{ route('user.settings')}}" role="button">Cancel</a>
+                    <button type="submit" class="btn btn-lg btn--cta text-white text-decoration-none">Update</button>
                      <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
                    </div>
                 </form>
@@ -82,20 +86,5 @@
          </div>
        </div>
     </div>
-
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-        document.getElementById("loginLink").addEventListener("click", function(event) {
-            event.preventDefault();
-            swal("Are you sure you want to Logout?", {
-                buttons: ["Cancel", true],
-            }).then((value) => {
-                if (value) {
-                    window.location.href = "{{ route('login') }}";
-                }
-            });
-        });
-    </script>
 
 

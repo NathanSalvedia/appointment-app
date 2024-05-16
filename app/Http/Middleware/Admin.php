@@ -16,11 +16,14 @@ class Admin
      */
     public function handle(Request $request, Closure $next): Response
     {
+
         if (!Auth::check()) {
             return redirect('/admin-login');
         }
 
-        return $next($request);
 
+
+
+        return $next($request);
     }
 }
