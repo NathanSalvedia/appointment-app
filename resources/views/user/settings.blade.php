@@ -71,7 +71,7 @@
                          </div>
                        </form>
                       <div class="mt-5 text-right">
-                        <a class="btn bnt-lg btn--cta text-white text-decoration-none" href="{{ route('settings.create')}}" role="button">Edit Profile</a>
+                        <a class="btn bnt-lg btn--cta text-white text-decoration-none" href="{{ Route('user.edit-profile')}}" role="button">Update  Profile</a>
                          <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
                         </div>
             </div>

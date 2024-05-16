@@ -7,7 +7,7 @@
         <div class="bg-white shadow-sm">
             <h1 class="border-bottom p-4 text-center">Reset Password</h1>
             <div class="px-4 py-4 p-5">
-                <form class="form-signup" method="POST" action="{{ route('passwordreset')}}">
+                <form class="form-signup">
                     @csrf
                 <div class="mb-3 pt-3">
                     <label for="email" class="form-label">Email:</label>
