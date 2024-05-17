@@ -12,7 +12,7 @@
                         @csrf
                         <div class="row">
                             <div hidden>
-                                <input type="text" class="form-control" name="role" value="1" />
+                                <input type="text" class="form-control" name="role" value="0" />
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="firstname" class="form-label text-dark">First Name:</label>

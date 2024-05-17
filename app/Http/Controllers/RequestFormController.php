@@ -4,19 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RequestForm;
-use App\Models\User; // Change Users to User for model name consistency
-use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Illuminate\Support\Facades\Storage;
 
 class RequestFormController extends Controller
 {
     public function displayUser()
     {
-        // Retrieve all items from the database
         $users = User::all();
-
-        // Pass the items data to the view
-        return view('admin.admin-mainpage', compact('users')); // Removed slash from view name
+        return view('admin.admin-mainpage', compact('users'));
     }
 
     public function create()
@@ -32,15 +28,7 @@ class RequestFormController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'firstname' => 'required',
-            'middlename' => 'required',
-            'lastname' => 'required',
-            'phonenumber' => 'required',
-            'typesofrequirements' => 'required',
-            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048', // Adjusted validation for image
-            'purpose' => 'required',
-        ]);
+
 
         $requestForm = new RequestForm();
         $requestForm->firstname = $request->firstname;
@@ -48,14 +36,15 @@ class RequestFormController extends Controller
         $requestForm->lastname = $request->lastname;
         $requestForm->phonenumber = $request->phonenumber;
         $requestForm->typesofrequirements = $request->typesofrequirements;
+        $requestForm->purpose = $request->purpose;
 
         // Handle file upload
-        $imagePath = $request->file('image')->store('public/images');
-        $requestForm->image = $imagePath;
 
-        $requestForm->purpose = $request->purpose;
+
+        // Save the data
         $requestForm->save();
 
+        // Redirect
         return redirect()->route('status');
     }
 
@@ -71,7 +60,7 @@ class RequestFormController extends Controller
         return view('user.edit', compact('requestForm'));
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'firstname' => 'required|string|max:255',
@@ -79,33 +68,30 @@ class RequestFormController extends Controller
             'lastname' => 'required|string|max:255',
             'phonenumber' => 'required|string|max:15',
             'typesofrequirements' => 'required|string',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048', // Adjusted validation for image
+            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
             'purpose' => 'nullable|string',
         ]);
 
-        $requestForm = RequestForm::findOrFail($request->id); // Retrieve request form by ID
+        $requestForm = RequestForm::findOrFail($id);
 
-        $requestForm->update([
-            'firstname' => $request->firstname,
-            'middlename' => $request->middlename,
-            'lastname' => $request->lastname,
-            'phonenumber' => $request->phonenumber,
-            'typesofrequirements' => $request->typesofrequirements,
-            'purpose' => $request->purpose,
-        ]);
+        $requestForm->firstname = $request->firstname;
+        $requestForm->middlename = $request->middlename;
+        $requestForm->lastname = $request->lastname;
+        $requestForm->phonenumber = $request->phonenumber;
+        $requestForm->typesofrequirements = $request->typesofrequirements;
+        $requestForm->purpose = $request->purpose;
+        $requestForm->image = $request->image;
 
         // Handle file upload
         if ($request->hasFile('image')) {
-            // Delete old image if exists
-            Storage::delete($requestForm->image);
-
-            // Store new image
-            $imagePath = $request->file('image')->store('public/images');
-            $requestForm->image = $imagePath;
+            $imageX = $request->file('image');
+            $imageName = time() . '.' . $imageX->getClientOriginalExtension();
+            $imageX->move(public_path('/img'), $imageName);
+            $requestForm->image = $imageName;
         }
 
         $requestForm->save();
 
-        return redirect()->route('edit', $request->id)->with('success', 'Information updated successfully');
+        return redirect()->route('status', $request->id)->with('success', 'Information updated successfully');
     }
 }

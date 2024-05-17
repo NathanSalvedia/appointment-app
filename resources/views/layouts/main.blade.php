@@ -38,8 +38,8 @@
             </a>
             <div class="collapse navbar-collapse" id="navbar-toggler">
                 <ul class="navbar-nav ml-auto main-nav-list">
-                    <li><a class="nav-item main-nav-link nav-cta" href="status">Appointment</a></li>
-                    <li><a class="nav-item main-nav-link" href="settings">Settings</a></li>
+                    <li><a class="nav-item main-nav-link nav-cta" href="{{ route('status')}}">Appointment</a></li>
+                    <li><a class="nav-item main-nav-link" href="{{ route('user.settings')}}">Settings</a></li>
                     <li><a class="nav-item main-nav-link" href='{{ route('logout')}}'>Logout</a></li>
                   </ul>
             </div>

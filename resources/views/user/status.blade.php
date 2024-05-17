@@ -1,6 +1,8 @@
 @extends('layouts.default')
+@extends('layouts.general')
 
 @section('title', 'Appointment App | Status')
+
 
 <div class="container-fluid">
     <div class="row">
@@ -8,7 +10,9 @@
             <div class="card-sidebar">
                 <div class="mb-5 pt-5 pl-3">
                     <a href="#">
-                        <img src="{{ asset('img/icon.png')}}" alt="icon"/>
+                        @if(Auth::check() && Auth::user()->profile_picture)
+                        <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture" style ="width: 200px; height: 200px;">
+                    @endif
                     </a>
                 </div>
                 <div class="mb-5 pl-3 text-white">
@@ -18,7 +22,7 @@
                     <ul class="list-unstyled">
                         <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
                         <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="status">Appointment</a></li>
-                        <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="user.settings">Settings</a></li>
+                        <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('user.settings')}}">Settings</a></li>
                         <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}">Logout</a></li>
                     </ul>
                 </div>
