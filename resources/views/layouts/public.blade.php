@@ -18,6 +18,7 @@
 
     <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{ asset('css/general.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jasny-bootstrap.min.css') }}" rel="stylesheet">
 </head>
 
 
@@ -29,7 +30,10 @@
 
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.min.js')}}"></script>
     <script src="{{ asset('js/script.js')}}"></script>
+    <script src="{{ asset('js/popper.min.js')}}"></script>
+    <script src="{{ asset('js/jasny-bootstrap.min.js') }}"></script>
 </script>
 </body>
 </html>

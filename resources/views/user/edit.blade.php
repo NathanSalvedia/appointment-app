@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'Appointment App | Edit Request ')
+
 
 <div class="container">
     <div class="bg-white shadow-sm rounded mt-5 m-5 p-3">
@@ -11,7 +11,7 @@
                 </div>
                 <form class="cta-form" method="POST" action="{{ route('edit.update', ['id' => $requestForm->id]) }}" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT') <!-- Add
+
                     <!-- Add a hidden input field for the ID -->
                     <input type="hidden" name="id" value="{{ $requestForm->id }}">
                     <div class="row my-5">
@@ -36,9 +36,10 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+
+                    <div class="cta--form">
                         <label for="typesofrequirements" class="form-label text-dark">Types of Requirements:</label>
-                        <select id="typesofrequirements" name="typesofrequirements" class="form-control" required>
+                        <select id="typesofrequirements" name="typesofrequirements"  required>
                             <option value="">Please choose one option:</option>
                             <option value="Transcript of Record" {{ $requestForm->typesofrequirements == 'Transcript of Record' ? 'selected' : '' }}>Transcript of Record</option>
                             <option value="COR" {{ $requestForm->typesofrequirements == 'COR' ? 'selected' : '' }}>COR</option>
@@ -51,7 +52,8 @@
 
                     <div class="form-group mt-3 pt-4">
                         <label for="image" class="form-label text-dark">Choose a file / Image:</label>
-                        <input type="file" class="form-control-file" id="image" name="image" accept=".jpg, .jpeg, .png" />
+                        <input type="file" class="form-control-file" id="image" name="image"  accept=".jpg, .jpeg, .png"  />
+
                     </div>
 
                     <div class="form-floating mt-4">
@@ -68,4 +70,3 @@
         </div>
     </div>
 </div>
-@endsection

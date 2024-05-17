@@ -18,6 +18,7 @@
 
     <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{ asset('css/deafult.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/general.css') }}" rel="stylesheet">
 
 
 

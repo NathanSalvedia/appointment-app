@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Auth\SettingsController;
+use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\RequestFormController;
 use App\Http\Controllers\MainpageController;
 
@@ -27,15 +27,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('view/{id}', [RequestFormController::class, 'show'])->name('view');
     Route::get('settings', [SettingsController::class, 'index'])->name('user.settings');
     Route::get('edit-profile', [SettingsController::class, 'edit'])->name('user.edit-profile');
-    Route::post('edit-profile', [SettingsController::class, 'update'])->name('profile-update');
+    Route::post('edit-profile', [SettingsController::class, 'updateProfile'])->name('edit-profile.updateProfile');
     Route::get('/mainpage', MainpageController::class);
-
-    // Route for editing request form
     Route::get('edit/{id}', [RequestFormController::class, 'edit'])->name('user.edit');
-
-    // Route for updating request form
-Route::post('edit/{id}', [RequestFormController::class, 'update'])->name('edit.update');
-
-    // Route for admin mainpage
-    Route::get('/admin-mainpage', [RequestFormController::class, 'displayUser'])->name('admin-mainpage.displayUser')->middleware('admin');
+    Route::post('edit/{id}', [RequestFormController::class, 'update'])->name('edit.update');
 });
+
+
+Route::get('/admin-mainpage', [RequestFormController::class, 'displayUser'])->name('admin-mainpage.displayUser')->middleware('admin');

@@ -6,12 +6,24 @@
  <div class="row">
       <div class=".col">
         <div class="card-sidebar">
-            <div class=" mb-5 pt-5 pl-3"><a href="#">
-              <img  src="{{ asset('img/icon.png')}}" alt="icon"/>
-             </a></div>
-            <div class="mb-5 pl-3 text-white">
-               <p class="cta-text">  Hi, {{  Auth::user()->firstname }}!</p>
-            </div>
+            <div class="pt-3 mb-3">
+                <div class="fileinput fileinput-new" data-provides="fileinput">
+                  <div class="d-flex justify-content-end" style = "position: relative; right: 280px;">
+                    <div class="fileinput-new img-thumbnail" style="width: 220px; height: 220px;">
+                        <a href="">
+                        @if(Auth::check() && Auth::user()->profile_picture)
+                        <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture" style ="width: 200px; height: 200px;">
+                    @endif
+                    <a>
+                    </div>
+                  </div>
+                  <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 220px; max-height: 220px;"></div>
+                </div>
+              </div>
+              <div class="mb-5 pl-3 text-white">
+                 <p class="cta-text" > Hi, {{  Auth::user()->firstname }}!</p>
+              </div>
+
            <div class="nav">
             <ul class="list-unstyled">
               <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
@@ -29,13 +41,19 @@
                 <h1>Settings</h1>
             </div>
             <div class="col-md-12">
-                <div class="btn-iimg text-center  pt-5 mt-5 pl-5 ">
-                          <img class="icon" alt="" src="{{ asset('img/icon.png')}}" />
-                     </div>
-                      <div class="mt-5 text-right">
-                       <a class="btn bnt-lg btn--cta text-white text-decoration-none" href="user.profile" role="button">Change Profile</a>
-                        <!--<button  type="submit" class="btn  btn-lg">Change Profile</button>-->
-                       </div>
+
+                <div class="form-group pt-5 mt-5">
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                      <div class="d-flex justify-content-end" style = "position: relative; left: 600px;">
+                        <div class="fileinput-new img-thumbnail" style="width: 220px; height: 220px;">
+                       @if(Auth::check() && Auth::user()->profile_picture)
+                        <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture" style ="width: 200px; height: 200px;">
+                    @endif
+                        </div>
+                      </div>
+                      <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 220px; max-height: 220px;"></div>
+                    </div>
+                  </div>
 
                        <form class="form--cta cta-form pl-5 mt-5">
                         <div class="row my-5">
@@ -80,16 +98,3 @@
     </div>
  </div>
 
- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
- <script>
-     document.getElementById("loginLink").addEventListener("click", function(event) {
-         event.preventDefault();
-         swal("Are you sure you want to Logout?", {
-             buttons: ["Cancel", true],
-         }).then((value) => {
-             if (value) {
-                 window.location.href = "{{ route('login') }}";
-             }
-         });
-     });
- </script>

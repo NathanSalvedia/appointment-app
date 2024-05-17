@@ -8,18 +8,27 @@
     <div class="row">
       <div class=".col">
         <div class="card-sidebar">
-            <div class=" mb-5 pt-5 pl-3"><a href="#">
-                <img  src="{{ asset('img/icon.png')}}" alt="icon"/>
-               </a>
-            </div>
+            <div class="pt-3 mb-3">
+                <div class="fileinput fileinput-new" data-provides="fileinput">
+                  <div class="d-flex justify-content-end" style = "position: relative; right: 280px;">
+                    <div class="fileinput-new img-thumbnail" style="width: 220px; height: 220px;">
+                        @if(Auth::check() && Auth::user()->profile_picture)
+                        <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
+                    @endif
+                    </div>
+                  </div>
+                  <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 220px; max-height: 220px;"></div>
+                </div>
+              </div>
               <div class="mb-5 pl-3 text-white">
                  <p class="cta-text" > Hi, {{  Auth::user()->firstname }}!</p>
               </div>
+
              <div class="nav">
               <ul class="list-unstyled">
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="status">Appointment</a></li>
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="settings">Settings</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('user.settings')}}">Settings</a></li>
                 <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}">Logout</a></li>
               </ul>
              </div>
