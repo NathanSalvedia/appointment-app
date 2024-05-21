@@ -8,13 +8,11 @@
     <div class="row">
         <div class=".col">
             <div class="card-sidebar">
-                <div class="mb-5 pt-5 pl-3">
-                    <a href="#">
-                        @if(Auth::check() && Auth::user()->profile_picture)
-                        <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture" style ="width: 200px; height: 200px;">
-                    @endif
-                    </a>
-                </div>
+                <div class="pt-3 mb-3">
+                    <div class="mb-5 pt-5 pl-3">
+                        <img src="{{ asset('img/logo7.png')}}" alt="Profile Picture">
+                     </div>
+                 </div>
                 <div class="mb-5 pl-3 text-white">
                     <p class="cta-text"> Hi, {{ Auth::user()->firstname }}! </p>
                 </div>
@@ -50,7 +48,7 @@
                                     {{ $appointment->typesofrequirements }}
                                 </td>
                                 <td class="text-right ml-5">
-                                    Pending
+                                    {{ $appointment->status }}
                                 </td>
                                 <td width="150" class="text-right">
                                     <a href="{{ route('view', ['id' => $appointment->id]) }}" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>

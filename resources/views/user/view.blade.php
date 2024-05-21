@@ -30,19 +30,20 @@
 
                         <div class="col-md-3 mb-3">
                             <label for="phone" class="form-label text-dark">Phone Number:</label>
-                            <input type="text" readonly class="form-control form-control-lg bg-white form-control-lg"  value="{{ Auth::user()->phonenumber}}" id="phone" readonly />
+                            <input type="text"  class="form-control form-control-lg bg-white form-control-lg"  value="{{ Auth::user()->phonenumber}}" id="phone" readonly />
                         </div>
                     </div>
 
                     @foreach ($appointments as $appointment)
                         @if ($appointment->id == request()->id)
                              <div class="cta--form">
+
                                 <option>{{ $appointment->typesofrequirements }}</option><br>
                              </div>
 
                              <div class="form-group mt-3 pt-4">
                                 <div class="">
-                                   <img  src="{{ asset('img/' .$appointment->image)}}" height="250" width="250" alt=""/>
+                                   <img  src="{{ asset('img/' .$appointment->image)}}" height="180" width="180" alt=""/>
                                 </div>
                               </div>
 

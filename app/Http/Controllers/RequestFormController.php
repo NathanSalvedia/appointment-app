@@ -9,11 +9,6 @@ use Illuminate\Support\Facades\Storage;
 
 class RequestFormController extends Controller
 {
-    public function displayUser()
-    {
-        $users = User::all();
-        return view('admin.admin-mainpage', compact('users'));
-    }
 
     public function create()
     {
@@ -36,15 +31,12 @@ class RequestFormController extends Controller
         $requestForm->lastname = $request->lastname;
         $requestForm->phonenumber = $request->phonenumber;
         $requestForm->typesofrequirements = $request->typesofrequirements;
+        $requestForm->image = $request->image;
         $requestForm->purpose = $request->purpose;
 
-        // Handle file upload
-
-
-        // Save the data
         $requestForm->save();
 
-        // Redirect
+
         return redirect()->route('status');
     }
 
@@ -94,4 +86,8 @@ class RequestFormController extends Controller
 
         return redirect()->route('status', $request->id)->with('success', 'Information updated successfully');
     }
+
+
+
+
 }

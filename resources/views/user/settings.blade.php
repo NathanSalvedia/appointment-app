@@ -7,19 +7,10 @@
       <div class=".col">
         <div class="card-sidebar">
             <div class="pt-3 mb-3">
-                <div class="fileinput fileinput-new" data-provides="fileinput">
-                  <div class="d-flex justify-content-end" style = "position: relative; right: 280px;">
-                    <div class="fileinput-new img-thumbnail" style="width: 220px; height: 220px;">
-                        <a href="">
-                        @if(Auth::check() && Auth::user()->profile_picture)
-                        <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture" style ="width: 200px; height: 200px;">
-                    @endif
-                    <a>
-                    </div>
-                  </div>
-                  <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 220px; max-height: 220px;"></div>
-                </div>
-              </div>
+                <div class="mb-5 pt-5 pl-3">
+                    <img src="{{ asset('img/logo7.png')}}" alt="Profile Picture">
+                 </div>
+             </div>
               <div class="mb-5 pl-3 text-white">
                  <p class="cta-text" > Hi, {{  Auth::user()->firstname }}!</p>
               </div>
@@ -97,4 +88,3 @@
        </div>
     </div>
  </div>
-

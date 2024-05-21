@@ -49,65 +49,31 @@
                                   <th scope="col">First Name</th>
                                   <th scope="col">Middle Name</th>
                                   <th scope="col">Last Name</th>
-                                  <th scope="col">Username  </th>
-
                                   <th scope="col">Status</th>
                                   <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-
-                           @foreach ($users as $user )
+                              @foreach ($appointments as $appointment)
                                 <tr>
-<td> {{ $user->id }} </td>
-<td> {{ $user->firstname }} </td>
-<td> {{ $user->middlename }} </td>
-<td> {{ $user->lastname }} </td>
-<td> {{ $user->phonenumber }} </td>
-<td> {{ $user->username }} </td>
-<td> {{ $user->typesofrequirements }} </td>
-<td>
-    <a href="admin.admin-request" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-    <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
-</td>
-
-                                    <tr>
-
-
-
+                                <td> {{ $appointment->id }} </td>
+                                <td> {{ $appointment->firstname }} </td>
+                                <td> {{ $appointment->middlename }} </td>
+                                <td> {{ $appointment->lastname }} </td>
+                                <td> {{ $appointment->status}}</td>
+                                <td>
+                                <a  class="btn btn-sm btn-circle btn-outline-info" title="Show" href="{{ route('admin-view', ['id' => $appointment->id]) }}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-sm btn-circle btn-outline-danger" href="{{ url('admin-mainpage/delete/' . $appointment->id) }}"><i class="fa fa-times"></i></a>
+                                </td>
+                                </tr>
                            @endforeach
                             </tbody>
                      </table>
                     </div>
-            </div>
+                </div>
+             </div>
         </div>
     </div>
-</div>
-
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-    document.getElementById("deleteButton").addEventListener("click", function() {
-        swal({
-            title: "Are you sure?",
-            text: "You want, to delete this user!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-        .then((willDelete) => {
-            if (willDelete) {
-                swal("Success the user has been deleted!", {
-                    icon: "success",
-                });
-            } else {
-                swal("This will remain the same!");
-            }
-        });
-    });
-</script>
-
-
-
 
 
 

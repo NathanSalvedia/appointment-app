@@ -1,13 +1,15 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\RequestFormController;
 use App\Http\Controllers\MainpageController;
+use App\Http\Controllers\PasswordResetController;
+use App\Http\Controllers\NewPasswordController;
 
 // Authentication
 Route::get('/login', [LoginController::class, 'show'])->name('login');
@@ -33,5 +35,20 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('edit/{id}', [RequestFormController::class, 'update'])->name('edit.update');
 });
 
+Route::middleware('admin')->group(function (){
+    Route::get('/admin-mainpage', [DashboardController::class, 'displayUser'])->name('admin-mainpage.displayUser');
+    Route::get('admin-view/{id}', [DashboardController::class, 'show'])->name('admin-view');
+    Route::get('admin-form', [DashboardController::class, 'create'])->name('admin-form');
+    Route::post('admin-form', [DashboardController::class, 'store'])->name('form.store');
+    Route::get('/admin-mainpage/delete/{id}', [DashboardController::class, 'remove']);
+});
 
-Route::get('/admin-mainpage', [RequestFormController::class, 'displayUser'])->name('admin-mainpage.displayUser')->middleware('admin');
+
+Route::middleware('guest')->group(function (){
+    Route::get('forgot-password', [PasswordResetController::class, 'index'])->name('password.request');
+    Route::get('reset-password', [NewPasswordController::class, 'show'])->name('password.reset');
+
+
+});
+
+

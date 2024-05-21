@@ -15,8 +15,8 @@
               </div>
              <div class="nav">
               <ul class="list-unstyled">
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="admin.admin-mainpage">Dashboard</a></li>
-                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="">Logout</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin-mainpage.displayUser')}}">Dashboard</a></li>
+                <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('admin-logout')}}">Logout</a></li>
               </ul>
              </div>
         </div>
@@ -30,7 +30,12 @@
                     <p class="cta-text font-weight-bold">Create an Appointment</p>
                 </div>
               <div class="mt-3">
-                <form class="admin-form">
+                <form class="admin-form" method="POST" action="{{ route('admin-form')}}">
+                    @csrf
+
+
+                    <input type="hidden" name="appointment_id" value="{{ request()->query('id') }}">
+
                      <div class="mb-5">
                       <label for="date">Select Date:</label>
                       <input type="date" id="date" name="date">
@@ -41,15 +46,17 @@
                         <input type="time" class="form-control" id="timeInput" name="timeInput" required>
                       </div>
 
-                      <div class="" >
-                        <label for="Phone" class="form-text form-label "> Contact Number:</label>
-                        <input type="tel" class="form-control form-control-lg" name="phone" placeholder="+63" />
-                        </div>
-                  </form>
+                      <div class="mb-5">
+                        <label for="phonenumber" class="form-label text-dark">Phone Number:</label>
+                        <input type="text" class="form-control  form-control-lg" name="phonenumber"  placeholder="+63" value="{{ Auth::user()->phonenumber}}">
+                     </div>
 
-                <div class="mb-3 pt-3  text-right">
-                    <button type="button" class="btn bnt-lg btn--cta text-white text-decoration-none" id="submitBtn">Submit</button>
-              </div>
+                        <div class="mb-3 pt-3  text-right">
+                            <button type="submit" class="btn bnt-lg btn--cta text-white text-decoration-none">Submit</button>
+                      </div>
+
+
+                  </form>
              </div>
              </div>
             </div>
@@ -57,16 +64,3 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
- <script>
-  document.getElementById('submitBtn').addEventListener('click', function() {
-    swal({
-      title: "Success!",
-      text: "The Appointment has been Created!",
-      icon: "success",
-      button: "OK"
-    }).then(function() {
-      window.location.href = "admin.admin-mainpage";
-    });
-  });
-</script>
