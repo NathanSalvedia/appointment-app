@@ -72,4 +72,21 @@ class DashboardController extends Controller
     }
 
 
+    public function return(Request $request)
+    {
+        $appointments = RequestForm::where('id', $request->input('appointment_id'))->first();
+
+        $appointments->status = "Returned";
+        $appointments->admin_comment = $request->admin_comment;
+        $appointments->save();
+
+
+
+
+
+
+
+        return redirect()->route('admin-mainpage.displayUser')->with('status', 'Appointment has been returned to the user.');
+    }
+
 }

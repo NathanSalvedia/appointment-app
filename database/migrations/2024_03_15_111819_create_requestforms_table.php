@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('purpose');
             $table->string('status')->default('Pending');
+            $table->string('admin_comment')->nullable();
             $table->timestamps();
         });
     }

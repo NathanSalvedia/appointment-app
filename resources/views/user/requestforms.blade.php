@@ -36,6 +36,10 @@
                     <input type="text" class="form-control" name="status" value="Pending" />
                 </div>
 
+                <div hidden>
+                    <input type="text" class="form-control" name="status" value="Returned" />
+                </div>
+
                 <div class="col-md-11 m-auto">
                     <div class="mt-4 mb-4">
                         <p class="cta-text font-weight-bold">Request Form</p>
@@ -67,7 +71,7 @@
                             </div>
 
                             <div class="cta--form">
-                                <select id="select-option" name="typesofrequirements">
+                                <select id="select-option" name="typesofrequirements" required>
                                     <option value="">Please choose one option:</option>
                                       <option value="Transcript of Record">Transcript of Record</option>
                                     <option value="COR">COR</option>
