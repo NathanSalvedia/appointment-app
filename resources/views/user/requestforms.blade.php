@@ -8,18 +8,11 @@
     <div class="row">
       <div class=".col">
         <div class="card-sidebar">
-            <div class="pt-3 mb-3">
-                <div class="fileinput fileinput-new" data-provides="fileinput">
-                  <div class="d-flex justify-content-end" style = "position: relative; right: 280px;">
-                    <div class="fileinput-new img-thumbnail" style="width: 220px; height: 220px;">
-                        @if(Auth::check() && Auth::user()->profile_picture)
-                        <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
-                    @endif
-                    </div>
-                  </div>
-                  <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 220px; max-height: 220px;"></div>
-                </div>
-              </div>
+             <div class="pt-3 mb-3">
+                <div class="mb-5 pt-5 pl-3">
+                    <img src="{{ asset('img/logo7.png')}}" alt="Profile Picture">
+                 </div>
+             </div>
               <div class="mb-5 pl-3 text-white">
                  <p class="cta-text" > Hi, {{  Auth::user()->firstname }}!</p>
               </div>
@@ -38,6 +31,15 @@
        <div class="container">
         <div class="bg-white shadow-sm rounded mt-5 m-5 p-3">
             <div class="row">
+
+                <div hidden>
+                    <input type="text" class="form-control" name="status" value="Pending" />
+                </div>
+
+                <div hidden>
+                    <input type="text" class="form-control" name="status" value="Returned" />
+                </div>
+
                 <div class="col-md-11 m-auto">
                     <div class="mt-4 mb-4">
                         <p class="cta-text font-weight-bold">Request Form</p>
@@ -69,7 +71,7 @@
                             </div>
 
                             <div class="cta--form">
-                                <select id="select-option" name="typesofrequirements">
+                                <select id="select-option" name="typesofrequirements" required>
                                     <option value="">Please choose one option:</option>
                                       <option value="Transcript of Record">Transcript of Record</option>
                                     <option value="COR">COR</option>

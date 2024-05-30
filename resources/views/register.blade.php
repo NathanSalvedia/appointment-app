@@ -12,7 +12,7 @@
                         @csrf
                         <div class="row">
                             <div hidden>
-                                <input type="text" class="form-control" name="role" value="0" />
+                                <input type="text" class="form-control" name="role" value="admin" />
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="firstname" class="form-label text-dark">First Name:</label>
@@ -68,7 +68,6 @@
                         <div class="px-3 mb-3">
                             <label for="email" class="form-label text-dark">Email:</label>
                             <input type="email" class="form-control  form-control-lg @error('email') is-invalid @enderror" name="email"  value="{{ old('email') }}" />
-
 
                             @error('email')
                             <div class="invalid-feedback">{{ $message }}</div>

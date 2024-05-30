@@ -6,16 +6,11 @@
         <div class=".col">
             <div class="card-sidebar">
                 <div class="pt-3 mb-3">
-                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                      <div class="d-flex justify-content-end" style = "position: relative; right: 280px;">
-                        <div class="fileinput-new img-thumbnail" style="width: 220px; height: 220px;">
-                            @if(Auth::check() && Auth::user()->profile_picture)
-                            <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
-                        @endif
-                        </div>
-                      </div>
-                      <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 220px; max-height: 220px;"></div>
-                    </div>
+                    <div class="pt-3 mb-3">
+                        <div class="mb-5 pt-5 pl-3">
+                            <img src="{{ asset('img/logo7.png')}}" alt="Profile Picture">
+                         </div>
+                     </div>
                   </div>
                   <div class="mb-5 pl-3 text-white">
                      <p class="cta-text" > Hi, {{  Auth::user()->firstname }}!</p>
@@ -41,19 +36,18 @@
                 <div class="form-group pt-5 mt-5">
                     <form class="form--cta cta-form pl-3" method="POST" action="{{ route('edit-profile.updateProfile') }}">
                         @csrf
-
                     <div class="fileinput fileinput-new" data-provides="fileinput">
-                        <div class="d-flex justify-content-end" style="position: relative; left: 430px;">
-                            <div class="fileinput-new img-thumbnail" style="width: 220px; height: 220px;">
+                        <div class="d-flex justify-content-end" style="position: relative; left: 280px;">
+                            <div class="fileinput-new img-thumbnail" style="width: 150px; height: 150px;">
                                 @if(Auth::check() && Auth::user()->profile_picture)
                                 <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
                             @endif
 
                             </div>
                         </div>
-                        <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 220px; max-height: 220px;"></div>
+                        <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 150px; max-height: 150px;"></div>
                         <div class="mt-4">
-                            <span class="btn--cta btn-lg btn-file" style="position: relative; left: 430px;">
+                            <span class="btn--cta btn-lg btn-file" style="position: relative; left: 280px;">
                                 <span class="fileinput-new">Select image</span>
                                 <span class="fileinput-exists">Change</span>
                                 <input type="file" name="profile_picture" id ="profile_picture">
@@ -90,6 +84,8 @@
                         <div class="mb-4 mt-2">
                             <label for="username" class="form-label text-dark">Username:</label>
                             <input type="text" class="form-control form-control-lg" name="username" id="username" />
+
+
                         </div>
 
                         <div class="mb-4 mt-2">
@@ -100,6 +96,7 @@
                         <div class="mb-4 mt-2">
                             <label for="password" class="form-label text-dark">Password:</label>
                             <input type="password" class="form-control form-control-lg" name="password" />
+
                         </div>
 
                         <div class="mb-4 mt-2">

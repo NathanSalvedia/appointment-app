@@ -11,13 +11,16 @@
                     @csrf
                 <div class="mb-3 pt-3">
                     <label for="email" class="form-label">Email:</label>
-                    <input type="email" class="form-control form-control-lg" name="email" />
+                    <input type="email" class="form-control form-control-lg  @error('email') is-invalid @enderror" name="email"  value="{{ old('email') }}"/>
+
+                    @error('email')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="mb-3 pt-3">
                     <button type="submit" class="btn btn-block btn-dark">Send Password reset link</button>
                 </div>
             </form>
-            </div>
         </div>
     </div>
 </div>

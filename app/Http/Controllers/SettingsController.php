@@ -46,9 +46,6 @@ class SettingsController extends Controller
 
         // Handle file upload
 
-
-
-
         $user->save();
 
         return redirect()->back()->with('success', 'Profile updated successfully.');
