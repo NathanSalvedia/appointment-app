@@ -17,8 +17,6 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-
-
                 <div class="mb-3 pt-3">
                     <button type="submit" class="btn btn-block btn-dark">Send Password reset link</button>
                 </div>

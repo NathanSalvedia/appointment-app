@@ -30,8 +30,8 @@
                         </div>
 
                         @foreach ($appointments as $appointment)
-                            @if ($appointment->id == request()->id)
-                                <form class="cta-form" method="POST" action="{{ route('admin.return-requestform', ['id' => $appointment->id]) }}">
+                            @if ($appointment->id == $id)
+                                <form class="cta-form" method="POST" action="{{ route('admin-view', ['id' => $appointment->id]) }}">
                                     @csrf
 
                                     <div class="row my-5">
@@ -65,7 +65,6 @@
                                             <img src="{{ asset('img/' . $appointment->image) }}" height="250" width="250" alt=""/>
                                         </div>
                                     </div>
-                                    <input type="hidden" name="appointment_id" value="{{ request()->query('id') }}">
                                     <div class="form-floating mt-5">
                                         <label for="floatingPlaintextInput">Purpose:</label>
                                         {{ $appointment->purpose }}

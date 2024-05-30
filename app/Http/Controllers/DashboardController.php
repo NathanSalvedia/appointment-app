@@ -72,21 +72,24 @@ class DashboardController extends Controller
     }
 
 
-    public function return(Request $request)
-    {
-        $appointments = RequestForm::where('id', $request->input('appointment_id'))->first();
+    public function returnn(Request $request)
+{
+    // Retrieve the appointment ID from the route parameters
+    $appointmentId = $request->route('id');
 
-        $appointments->status = "Returned";
-        $appointments->admin_comment = $request->admin_comment;
-        $appointments->save();
+    // Retrieve the RequestForm with the given ID
+    $requestForm = RequestForm::where('id', $appointmentId)->first();
 
+    if ($requestForm) {
+        // Update the status and admin comment
+        $requestForm->status = "Returned";
+        $requestForm->admin_comment = $request->admin_comment;
+        $requestForm->save();
 
-
-
-
-
-
-        return redirect()->route('admin-mainpage.displayUser')->with('status', 'Appointment has been returned to the user.');
+        // Redirect to the admin-view route with the appointment ID
+        return redirect('admin-mainpage');
+    } else {
+        return redirect()->back()->with('error', 'Appointment not found.');
     }
-
 }
+}   

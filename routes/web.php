@@ -13,6 +13,7 @@ use App\Http\Controllers\NewPasswordController;
 
 
 
+
 // Authentication
 Route::get('/login', [LoginController::class, 'show'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
@@ -43,7 +44,7 @@ Route::middleware('admin')->group(function (){
     Route::get('admin-form', [DashboardController::class, 'create'])->name('admin-form');
     Route::post('admin-form', [DashboardController::class, 'store'])->name('form.store');
     Route::get('/admin-mainpage/delete/{id}', [DashboardController::class, 'remove']);
-    Route::post('/admin-view', [DashboardController::class, 'return'])->name('admin.return-requestform');
+    Route::post('/admin-view/{id}', [DashboardController::class, 'returnn'])->name('admin-view');
 });
 
 
@@ -53,6 +54,5 @@ Route::middleware('guest')->group(function (){
     Route::get('reset-password', [NewPasswordController::class, 'show'])->name('password.reset');
 
 });
-
 
 
