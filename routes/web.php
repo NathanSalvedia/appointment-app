@@ -25,7 +25,12 @@ Route::get('/admin-login', [AdminLoginController::class, 'show'])->name('admin-l
 Route::post('/admin-login', [AdminLoginController::class, 'login']);
 Route::get('/admin-logout', [AdminLoginController::class, 'adminlogout'])->name('admin-logout');
 
+
+
+
+
 Route::middleware(['auth', 'verified'])->group(function () {
+
     Route::get('requestforms', [RequestFormController::class, 'create']);
     Route::post('requestforms', [RequestFormController::class, 'store'])->name('requestforms.store');
     Route::get('status', [RequestFormController::class, 'index'])->name('status');
@@ -36,6 +41,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/mainpage', MainpageController::class);
     Route::get('edit/{id}', [RequestFormController::class, 'edit'])->name('user.edit');
     Route::post('edit/{id}', [RequestFormController::class, 'update'])->name('edit.update');
+    Route::get('/user/notification', [DashboardController::class, 'showRequests'])->name('user.notification');
 });
 
 Route::middleware('admin')->group(function (){
@@ -56,6 +62,4 @@ Route::middleware('guest')->group(function (){
 });
 
 
-Route::get('/user/notification', function (){
-    return view('user.notification');
-})->name('user.notification');
+

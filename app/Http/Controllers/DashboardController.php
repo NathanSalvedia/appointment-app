@@ -3,12 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 use App\Models\User;
 use App\Models\RequestForm;
 use App\Models\Appointment;
 
+
 class DashboardController extends Controller
 {
+    //new changes
+    public function showRequests()
+    {
+        // Get the authenticated user
+        $user = Auth::user();
+
+        // Fetch request forms associated with the authenticated user's last name
+        $requestForms = RequestForm::where('lastname', $user->lastname)->get();
+
+        // Pass the data to the view
+        return view('user.notification', ['requestForms' => $requestForms]);
+    }
+
+
+
     public function index(){
         return view('admin.admin-mainpage');
     }
@@ -92,4 +110,4 @@ class DashboardController extends Controller
         return redirect()->back()->with('error', 'Appointment not found.');
     }
 }
-}   
+}

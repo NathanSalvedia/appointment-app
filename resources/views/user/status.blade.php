@@ -26,10 +26,9 @@
               </div>
               <div class="mt-auto mb-5 pl-3">
                 <ul class="list-unstyled">
-                  <li class="pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}" style="font-size: 2.1rem;">Logout</a></li>
+                  <li class="pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}" style="font-size: 1.8rem;">Logout</a></li>
                 </ul>
-              </div>
-
+              </div>x
             </div>
           </div>
         <div class="container">
