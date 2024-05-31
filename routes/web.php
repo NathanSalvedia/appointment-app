@@ -56,3 +56,6 @@ Route::middleware('guest')->group(function (){
 });
 
 
+Route::get('/user/notification', function (){
+    return view('user.notification');
+})->name('user.notification');
