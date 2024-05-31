@@ -4,29 +4,30 @@
 <div class="container-fluid">
     <div class="row">
         <div class=".col">
-            <div class="card-sidebar">
-                <div class="pt-3 mb-3">
-                    <div class="pt-3 mb-3">
-                        <div class="mb-5 pt-5 pl-3">
-                            <img src="{{ asset('img/logo7.png')}}" alt="Profile Picture">
-                         </div>
-                     </div>
-                  </div>
-                  <div class="mb-5 pl-3 text-white">
-                     <p class="cta-text" > Hi, {{  Auth::user()->firstname }}!</p>
-                  </div>
-
-                 <div class="nav">
-                  <ul class="list-unstyled">
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="status">Appointment</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('user.settings')}}">Settings</a></li>
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}">Logout</a></li>
-                  </ul>
-                 </div>
+            <div class="card-sidebar d-flex flex-column" style="height: 100vh;">
+              <div class="pt-3 mb-3">
+                <div class="mb-5 pt-5 pl-3">
+                  <img src="{{ asset('img/logo7.png')}}" alt="Profile Picture">
+                </div>
+              </div>
+              <div class="mb-5 pl-3 text-white">
+                <p class="cta-text">Hi, {{ Auth::user()->firstname }}!</p>
+              </div>
+              <div class="nav flex-grow-1">
+                <ul class="list-unstyled">
+                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('user.notification')}}">Inbox</a></li>
+                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
+                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="status">Appointment</a></li>
+                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('user.settings')}}">Settings</a></li>
+                </ul>
+              </div>
+              <div class="mt-auto mb-5 pl-3">
+                <ul class="list-unstyled">
+                  <li class="pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}" style="font-size: 1.8rem;">Logout</a></li>
+                </ul>
+              </div>x
             </div>
-           </div>
-
+          </div>
         <div class="container">
             <div class="row">
                 <div class="mt-5">

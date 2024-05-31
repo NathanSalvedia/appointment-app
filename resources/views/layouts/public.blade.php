@@ -27,8 +27,8 @@
 
 
 
-
-
+    <script src="{{ asset('https://code.jquery.com/jquery-3.5.1.slim.min.js')}}"></script>
+    <script src="{{ asset('https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js')}}"></script>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('js/jquery.min.js')}}"></script>
     <script src="{{ asset('js/script.js')}}"></script>
