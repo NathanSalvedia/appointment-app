@@ -89,6 +89,21 @@
                             <input type="password" class="form-control  form-control-lg" name="password_confirmation" />
 
                         </div>
+                        <div class="px-3 mb-3">
+                            <label for="security_question" class="form-label text-dark">Security Question:</label>
+                            <input type="text" class="form-control form-control-lg @error('security_question') is-invalid @enderror" name="security_question" value="{{ old('security_question') }}" />
+                            @error('security_question')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="px-3 mb-3">
+                            <label for="security_answer" class="form-label text-dark">Answer:</label>
+                            <input type="text" class="form-control form-control-lg @error('security_answer') is-invalid @enderror" name="security_answer" />
+                            @error('security_answer')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                     <div class="d-grid px-3 mt-5">
                         <button type="submit" class="btn btn-dark btn-lg btn-block">Register</button>

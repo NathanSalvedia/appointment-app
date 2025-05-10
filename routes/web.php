@@ -15,9 +15,12 @@ use App\Http\Controllers\NewPasswordController;
 
 
 // Authentication
-Route::get('/login', [LoginController::class, 'show'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
+Route::get('/', function () {
+    return view('login');
+});
+
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 Route::resource('register', RegisterController::class);
 
 // Admin
