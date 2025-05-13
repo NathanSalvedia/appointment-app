@@ -43,7 +43,7 @@
 
                              <div class="form-group mt-3 pt-4">
                                 <div class="">
-                                   <img  src="{{ asset('img/' .$appointment->image)}}" height="180" width="180" alt=""/>
+                                <img src="{{ asset('images/request/' . $appointment->image) }}" height="180" width="180" alt="Uploaded Image"/>
                                 </div>
                               </div>
 
@@ -56,7 +56,7 @@
 
                     <div class="mb-5 pt-5 text-right mx-3">
                         <a class="btn btn--cta btn-lg text-white text-decoration-none" href="{{ route('status')}}" role="button">Back</a>
-                        <a class="btn btn--cta btn-lg text-white text-decoration-none mx-3" href="{{ route('user.edit', ['id' => $appointment->id]) }}" role="button">Edit</a>
+                            <a class="btn btn--cta btn-lg text-white text-decoration-none mx-3" href="{{ route('user.edit', ['id' => $appointment->id]) }}" role="button">Edit</a>
 
                     </div>
                 </form>

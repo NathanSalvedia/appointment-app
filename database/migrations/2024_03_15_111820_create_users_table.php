@@ -21,8 +21,8 @@ return new class extends Migration
                 $table->string('email')->unique();
                 $table->timestamp('email_verified_at')->nullable();
                 $table->string('password');
-                $table->string('role_id');
-                $table->string('profile_picture')->default('profile.jpg');
+                $table->string('role_id')->nullable();
+                $table->string('profile_picture')->default('default.png');
                 $table->timestamps();
 
 

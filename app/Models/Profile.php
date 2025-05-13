@@ -18,6 +18,7 @@ class Profile extends Model
         'phonenumber',
         'username',
         'email',
+        'profile_picture',
         'password',
         'password_confirmation',
 

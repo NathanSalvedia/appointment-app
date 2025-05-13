@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('phonenumber');
             $table->string('typesofrequirements');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('purpose');
             $table->string('status')->default('Pending');
             $table->string('admin_comment')->nullable();

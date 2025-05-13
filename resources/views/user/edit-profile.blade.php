@@ -1,4 +1,9 @@
 @extends('layouts.public')
+@if(session('success'))
+    <div class="alert alert-success mt-3">
+        {{ session('success') }}
+    </div>
+@endif
 
 
 <div class="container-fluid">
@@ -6,26 +11,25 @@
         <div class=".col">
             <div class="card-sidebar d-flex flex-column" style="height: 100vh;">
               <div class="pt-3 mb-3">
-                <div class="mb-5 pt-5 pl-3">
-                  <img src="{{ asset('img/logo7.png')}}" alt="Profile Picture">
+              <div class="logo3">
+                  <img src="{{ Auth::user()->profile_picture 
+    ? asset('images/profile/' . Auth::user()->profile_picture) . '?t=' . time() 
+    : asset('images/profile/default.png') }}" alt="Profile Picture">
                 </div>
               </div>
               <div class="mb-5 pl-3 text-white">
-                <p class="cta-text">Hi, {{ Auth::user()->firstname }}!</p>
+                <h1 class="username-text">Hi, {{ Auth::user()->firstname }}!</h1>
               </div>
-              <div class="nav flex-grow-1">
-                <ul class="list-unstyled">
-                    <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('user.notification')}}">Inbox</a></li>
-                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ asset('mainpage')}}">Home</a></li>
-                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="status">Appointment</a></li>
-                  <li class="mb-5 pl-3"><a class="text-white text-decoration-none" href="{{ route('user.settings')}}">Settings</a></li>
+          <div class="container">
+        @include('layouts.navbar.sidenavbar')
+        @yield('content1')
+    </div>
+                <div class="navbar-collapse" id="navbar-toggler">
+                <ul class="navbar-nav ml-auto main-nav-list">
+                <li style="  list-style: none; display: flex; margin-top: 55px; margin-left: 20px; transition: all 0.3s;">
+                <a class="nav-item main-nav-link " href="{{ route('logout') }}">Logout</a></li>
                 </ul>
               </div>
-              <div class="mt-auto mb-5 pl-3">
-                <ul class="list-unstyled">
-                  <li class="pl-3"><a class="text-white text-decoration-none" href="{{ route('logout')}}" style="font-size: 1.8rem;">Logout</a></li>
-                </ul>
-              </div>x
             </div>
           </div>
         <div class="container">
@@ -35,24 +39,28 @@
                 </div>
 
                 <div class="form-group pt-5 mt-5">
-                    <form class="form--cta cta-form pl-3" method="POST" action="{{ route('edit-profile.updateProfile') }}">
+                <form class="form--cta cta-form pl-3" method="POST" action="{{ route('user.update-profile') }}" enctype="multipart/form-data">
                         @csrf
                     <div class="fileinput fileinput-new" data-provides="fileinput">
                         <div class="d-flex justify-content-end" style="position: relative; left: 280px;">
                             <div class="fileinput-new img-thumbnail" style="width: 150px; height: 150px;">
-                                @if(Auth::check() && Auth::user()->profile_picture)
-                                <img src="{{ asset('img/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
-                            @endif
+                            @if(Auth::check())
+                            <img src="{{ Auth::user()->profile_picture 
+    ? asset('images/profile/' . Auth::user()->profile_picture) . '?t=' . time() 
+    : asset('images/profile/default.png') }}" 
+    alt="Profile Picture" 
+    style="width: 100%; height: 100%; object-fit: cover;">
+                                    @endif
 
                             </div>
                         </div>
                         <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 150px; max-height: 150px;"></div>
                         <div class="mt-4">
-                            <span class="btn--cta btn-lg btn-file" style="position: relative; left: 280px;">
-                                <span class="fileinput-new">Select image</span>
-                                <span class="fileinput-exists">Change</span>
-                                <input type="file" name="profile_picture" id ="profile_picture">
-                            </span>
+                                <span class="btn--cta btn-lg btn-file" style="position: relative; left: 280px;">
+                                    <span class="fileinput-new">Select image</span>
+                                    <span class="fileinput-exists">Change</span>
+                                    <input type="file" name="profile_picture" id="profile_picture">
+                                </span>
                             <a href="#" class="btn--cta btn-outline-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
                         </div>
                     </div>
@@ -84,7 +92,7 @@
 
                         <div class="mb-4 mt-2">
                             <label for="username" class="form-label text-dark">Username:</label>
-                            <input type="text" class="form-control form-control-lg" name="username" id="username" />
+                            <input type="text" class="form-control form-control-lg"  name="username" id="username" value="{{ Auth::user()->username }}" />
 
 
                         </div>

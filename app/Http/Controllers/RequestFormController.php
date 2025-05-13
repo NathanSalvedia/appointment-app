@@ -76,12 +76,11 @@ class RequestFormController extends Controller
 
         // Handle file upload
         if ($request->hasFile('image')) {
-            $imageX = $request->file('image');
-            $imageName = time() . '.' . $imageX->getClientOriginalExtension();
-            $imageX->move(public_path('/img'), $imageName);
-            $requestForm->image = $imageName;
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images/request'), $filename);
+            $requestForm->image = $filename;
         }
-
         $requestForm->save();
 
         return redirect()->route('status', $request->id)->with('success', 'Information updated successfully');

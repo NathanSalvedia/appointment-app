@@ -59,9 +59,11 @@ class RegisterController extends Controller
             'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role_id' => $request->role,
+            'role_id' => $request->role_id ?? 2, // fallback to default role_id
+            'profile_picture' => 'default.png',
             'security_question' => $request->security_question,
             'security_answer' => Hash::make($request->security_answer),
+            
 
 
 

@@ -4,11 +4,23 @@ body{
     background-color: #76292A;
 
 }
-
-.auth-wrapper {
-    min-height: 60vh;
+.form-section {
+    background-color: white;
+}
+.container {
+    height: auto;
+    width: 100%;
 }
 
+.auth-wrapper {
+    min-height: auto;
+}
+
+.logo2 {
+    height: 20.875rem;
+    width: 20.875rem;
+    margin-top: .5rem;
+  }
 
 /*
 .wrapper{
@@ -20,6 +32,10 @@ body{
     font-size: 1.8rem ;
 }
 
+#captcha-img img {
+     width: 270px;
+     height: 150px;
+}
 
 .btn{
     font-size: 2rem;
@@ -34,17 +50,34 @@ form  input, label{
     font-size: 1.5rem;
 }
 
+.form-check-input {
+    transform: scale(1.4);
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
 
-
+  .form-check-label {
+  font-size: 1.5rem;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
 
 .cta-form{
     font-size: 1.9rem;
 }
 
-
+.error-message {
+    color: red;
+}
 
 .form-signup input{
     font-size: 1.9rem;
 
+}
+
+.text-center img{
+    width: 500px;
+    height: 500px;
 }
 

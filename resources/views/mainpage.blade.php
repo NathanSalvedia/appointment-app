@@ -1,8 +1,15 @@
 @extends('layouts.main')
 
 @section('title', 'Appointment App | MainPage')
+@section('css', 'css/style.css')
 
 @section('content')
+  @include('layouts.navbar.topnavbar')
+
+        @yield('content')
+
+        <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+
 <div class="container-fluid section-main p-5">
     <div class="main">
         <div class=" text-center">

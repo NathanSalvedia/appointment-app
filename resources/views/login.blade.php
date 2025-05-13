@@ -1,13 +1,13 @@
-@extends('layouts.layout')
+@extends('layouts.main')
 
 @section('title', 'Appointment App | Login ')
-
+@section('css', 'css/login.css')
 <div class="auth-wrapper d-flex pt-5">
-    <div class="col-md-4 m-auto p-4">
-        <div class="bg-white shadow p-3 mb-4 bg-body-tertiary  rounded">
+    <div class="container">
+        <div class="form-section">
             <div class="text-center pt-5" >
                 <a>
-                <img class="logo" alt="" src="img/logo9.png" />
+                <img class="logo2" alt="" src="images/logo.png" />
                 </a>
             </div>
             <div class=" px-3 pt-3 mx-4 m-3 p-5">
@@ -20,7 +20,7 @@
                     <input type="email" placeholder="Email:" class="form-control  form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"/>
 
                     @error('email')
-                    <div class="invalid-feedback">{{ $message }}</div>
+                    <div class="error-message">{{ $message }}</div>
                     @enderror
                  </div>
                  <div class="mb-5">
@@ -28,17 +28,14 @@
                     <input type="password"  class="form-control form-control-lg @error('password') is-invalid @enderror" placeholder="Password:"  name="password" value="{{ old('password') }}"/>
 
                     @error('password')
-                    <div class="invalid-feedback">{{ $message }}</div>
+                    <div class="error-message">{{ $message }}</div>
                     @enderror
                  </div>
 
                  <div class="mb-5 d-flex justify-content-between align-items-center">
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" name="remember" value="true" id="customCheck1">
-                        <label class="custom-control-label text-black-50" for="customCheck1">Remember me</label>
                      </div>
 
-                    <a class=" text-dark form-text text-decoration-none" href="{{ route('password.request')}}"> Forgot Password?</a>
                  </div>
 
                  <div class="mt-2 mb-2 d-grid ">

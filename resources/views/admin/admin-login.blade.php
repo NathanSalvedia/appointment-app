@@ -1,10 +1,10 @@
-@extends('layouts.layout')
+@extends('layouts.main')
 
 @section('title', 'Appointment App | Login ')
-
+@section('css', 'css/login.css')
 <div class="auth-wrapper d-flex pt-3 my-3">
-    <div class="col-md-4 m-auto p-4 mt-3">
-        <div class="bg-white shadow p-3 mb-4 bg-body-tertiary  rounded">
+<div class="container">
+        <div class="form-section">
             <div class="text-center pt-5" >
                 <a>
                 <img class="logo" alt="" src="{{ asset('img/logo9.png')}}" />

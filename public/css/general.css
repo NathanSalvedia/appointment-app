@@ -6,6 +6,12 @@ body
   font-family: "Montserrat", sans-serif;
 }
 
+.text h1{
+  margin-left: -400px;
+  margin-top: 40px;
+  font-weight: bold;
+  
+}
 .btn--cta{
     background-color:  #76292A;
     color: #fff;
@@ -19,17 +25,23 @@ body
 
 }
 
-.card-sidebar{
-  background-color: #76292A;
-  min-height: 119vh;
-  width: 300px;
+.logo3 img{
+  height: 250px;
+  width: 250px;
+  margin-left: 100px;  
+  border-radius: 100%;
+  }
+.username-text{
+  color: #fff;
+  font-size: bold;
+  margin-left: 100px;
 }
 
- .sidebar{
-    background-color: #76292A;
-    min-height: 110vh;
-
- }
+.card-sidebar{
+  background-color: #76292A;
+  height: auto;
+  width: 450px;
+}
 
 
 .heading{
@@ -133,3 +145,4 @@ body
 .modal-title{
     text-align: center;
 }
+
